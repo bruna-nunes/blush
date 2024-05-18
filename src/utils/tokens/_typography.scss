@@ -1,0 +1,99 @@
+@mixin typography-title-1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+@mixin typography-title-2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+@mixin typography-title-3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@mixin typography-title-4 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+@mixin typography-title-5 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+@mixin typography-title-6 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@mixin typography-body-1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@mixin typography-body-2 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin typography-body-3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@mixin typography-body-1-highlight {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@mixin typography-body-2-highlight {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@mixin typography-body-3-highlight {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@mixin typography-label-1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@mixin typography-label-1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@mixin typography-label-2 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@mixin typography-label-3 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@mixin typography-label-4 {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+@mixin typography-button-small {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@mixin typography-button-medium {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@mixin typography-button-large {
+    font-size: 20px;
+    font-weight: 600;
+}

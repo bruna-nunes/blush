@@ -1,0 +1,21 @@
+$spacing-x: (
+    'nano': 2px,
+    'micro': 4px,
+    'small': 8px,
+    'medium': 16px,
+    'large': 24px,
+    'giant': 48px,
+);
+
+$spacing-y: (
+    'nano': 2px,
+    'micro': 4px,
+    'small': 8px,
+    'medium': 16px,
+    'large': 24px,
+    'giant': 48px,
+);
+
+@function spacing($measure) {
+    @return #{$measure * 4}px;
+}
