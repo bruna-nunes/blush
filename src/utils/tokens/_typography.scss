@@ -1,99 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@mixin font-family-pattern {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
 @mixin typography-title-1 {
+    @include font-family-pattern;
+
     font-size: 48px;
     font-weight: 700;
 }
 
 @mixin typography-title-2 {
+    @include font-family-pattern;
+
     font-size: 40px;
     font-weight: 700;
 }
 
 @mixin typography-title-3 {
+    @include font-family-pattern;
+
     font-size: 32px;
     font-weight: 700;
 }
 
 @mixin typography-title-4 {
+    @include font-family-pattern;
+
     font-size: 28px;
     font-weight: 700;
 }
 
 @mixin typography-title-5 {
+    @include font-family-pattern;
+
     font-size: 24px;
     font-weight: 700;
 }
 
 @mixin typography-title-6 {
+    @include font-family-pattern;
+
     font-size: 20px;
     font-weight: 700;
 }
 
 @mixin typography-body-1 {
+    @include font-family-pattern;
+
     font-size: 18px;
     font-weight: 400;
 }
 
 @mixin typography-body-2 {
+    @include font-family-pattern;
+
     font-size: 16px;
     font-weight: 400;
 }
 
 @mixin typography-body-3 {
+    @include font-family-pattern;
+
     font-size: 14px;
     font-weight: 400;
 }
 
 @mixin typography-body-1-highlight {
+    @include font-family-pattern;
+
     font-size: 18px;
     font-weight: 600;
 }
 
 @mixin typography-body-2-highlight {
+    @include font-family-pattern;
+
     font-size: 16px;
     font-weight: 600;
 }
 
 @mixin typography-body-3-highlight {
+    @include font-family-pattern;
+
     font-size: 14px;
     font-weight: 600;
 }
 
 @mixin typography-label-1 {
+    @include font-family-pattern;
+
     font-size: 16px;
     font-weight: 600;
 }
 
 @mixin typography-label-1 {
+    @include font-family-pattern;
+
     font-size: 16px;
     font-weight: 600;
 }
 
 @mixin typography-label-2 {
+    @include font-family-pattern;
+
     font-size: 14px;
     font-weight: 600;
 }
 
 @mixin typography-label-3 {
+    @include font-family-pattern;
+
     font-size: 12px;
     font-weight: 600;
 }
 
 @mixin typography-label-4 {
+    @include font-family-pattern;
+
     font-size: 10px;
     font-weight: 600;
 }
 
 @mixin typography-button-small {
+    @include font-family-pattern;
+
     font-size: 14px;
     font-weight: 600;
 }
 
 @mixin typography-button-medium {
+    @include font-family-pattern;
+
     font-size: 18px;
     font-weight: 600;
 }
 
 @mixin typography-button-large {
+    @include font-family-pattern;
+
     font-size: 20px;
     font-weight: 600;
 }
