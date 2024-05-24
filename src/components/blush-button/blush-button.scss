@@ -1,0 +1,267 @@
+.blush-button {
+    border: none;
+    border-radius: map-get($border-radius, 'small');
+    display: flex;
+    align-items: center;
+    transition: all 400ms linear;
+
+    &:hover, &:active {
+        &:not([disabled]) {
+            cursor: pointer;
+            box-shadow: map-get($shadows, '001');
+        }
+    }
+
+    &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+   
+    // ***Colors
+    &.primary {
+        background-color: map-get($primary-absolute, '001');
+        color: map-get($neutral, '013');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($primary-absolute, '002');
+            }
+        }
+    }
+
+    &.primary-outline {
+        background-color: map-get($neutral, '013');
+        border: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+        color: map-get($primary-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($neutral, '014');
+                border: map-get($border-width, 'nano') solid map-get($primary-absolute, '002');
+                color: map-get($primary-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.primary-ghost {
+        background-color: map-get($neutral, '014');
+        color: map-get($primary-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                color: map-get($primary-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.accent {
+        background-color: map-get($accent-absolute, '001');
+        color: map-get($neutral, '013');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($accent-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.accent-outline {
+        background-color: map-get($neutral, '013');
+        border: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+        color: map-get($accent-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($neutral, '014');
+                border: map-get($border-width, 'nano') solid map-get($accent-absolute, '002');
+                color: map-get($accent-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.accent-ghost {
+        background-color: map-get($neutral, '014');
+        color: map-get($accent-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                color: map-get($accent-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.success {
+        background-color: map-get($success-absolute, '001');
+        color: map-get($neutral, '013');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($success-absolute, '002');
+            }
+        }
+    }
+
+    &.success-outline {
+        background-color: map-get($neutral, '013');
+        border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+        color: map-get($success-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($neutral, '014');
+                border: map-get($border-width, 'nano') solid map-get($success-absolute, '002');
+                color: map-get($success-absolute, '002');
+            }   
+        }
+    }
+
+    &.success-ghost {
+        background-color: map-get($neutral, '014');
+        color: map-get($success-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                color: map-get($success-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.warning {
+        background-color: map-get($warning-absolute, '001');
+        color: map-get($neutral, '013');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($warning-absolute, '002');
+            }  
+        }
+    }
+
+    &.warning-outline {
+        background-color: map-get($neutral, '013');
+        border: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+        color: map-get($warning-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($neutral, '014');
+                border: map-get($border-width, 'nano') solid map-get($warning-absolute, '002');
+                color: map-get($warning-absolute, '002');
+            }
+        }
+    }
+
+    &.warning-ghost {
+        background-color: map-get($neutral, '014');
+        color: map-get($warning-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                color: map-get($warning-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.danger {
+        background-color: map-get($error-absolute, '001');
+        color: map-get($neutral, '013');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($error-absolute, '002');
+            }  
+        }
+    }
+
+    &.danger-outline {
+        background-color: map-get($neutral, '013');
+        border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+        color: map-get($error-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($neutral, '014');
+                border: map-get($border-width, 'nano') solid map-get($error-absolute, '002');
+                color: map-get($error-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.danger-ghost {
+        background-color: map-get($neutral, '014');
+        color: map-get($error-absolute, '001');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                color: map-get($error-absolute, '002');
+            }
+            
+        }
+    }
+
+    &.neutral {
+        background-color: map-get($neutral, '004');
+        color: map-get($neutral, '013');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($neutral, '005');
+            }  
+        }
+    }
+
+    &.neutral-outline {
+        background-color: map-get($neutral, '013');
+        border: map-get($border-width, 'nano') solid map-get($neutral, '004');
+        color: map-get($neutral, '004');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                background-color: map-get($neutral, '014');
+                border: map-get($border-width, 'nano') solid map-get($neutral, '005');
+                color: map-get($neutral, '005');
+            } 
+        }
+    }
+
+    &.neutral-ghost {
+        background-color: map-get($neutral, '014');
+        color: map-get($neutral, '004');
+
+        &:hover, &:active {
+            &:not([disabled]) {
+                color: map-get($neutral, '005');
+            } 
+        }
+    }
+
+    // ***Sizes
+    &.small {
+        height: 32px;
+        padding: spacing(2) spacing(10);
+
+        @include typography-button-small;
+    }
+
+    &.medium {
+        height: 40px;
+        padding: spacing(2) spacing(10);
+
+        @include typography-button-medium;
+    }
+
+    &.large {
+        height: 48px;
+        padding: spacing(3) spacing(10);
+
+        @include typography-button-large;
+    }
+}
