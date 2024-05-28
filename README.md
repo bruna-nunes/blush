@@ -2,14 +2,22 @@
 
 Component Library and future Design System. Lightweight and easy to install
 
-### Tools and Technologies used
+## 🧰 Tools and Technologies used
 
 - Vue
 - Vite
 - Sass
 
-### How to install
-/* decide and describe */
+## 💻 How to use
 
-### Dependencies
+### Install dependencies
+`npm install`
+
+### Run the dev server
+`npm run dev`
+
+### Build a version to production
+`npm run build`
+
+## 🪄 Dependencies
 /* decide and describe */
