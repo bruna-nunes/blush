@@ -17,5 +17,10 @@ $spacing-y: (
 );
 
 @function spacing($measure) {
-    @return #{$measure * 4}px;
+    @if type-of($measure) == number and $measure > 0 {
+        @return #{$measure * 4}px;
+    } @else {
+        @error 'Invalid measure. Must be a number and greather than 0'
+    }
+    
 }
