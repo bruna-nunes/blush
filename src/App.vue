@@ -3,7 +3,6 @@
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-    <comp-example msg="Componente exemplo" />
     <div class="line-buttons">
       <blush-button
         id="button1"
