@@ -7,6 +7,7 @@ Component Library and future Design System. Lightweight and easy to install
 - Vue
 - Vite
 - Sass
+- Storybook
 
 ## 💻 How to use
 
@@ -18,6 +19,9 @@ Component Library and future Design System. Lightweight and easy to install
 
 ### Build a version to production
 `npm run build`
+
+### Start the Storybook server to see components documentation
+`npm run storybook`
 
 ## 🪄 Dependencies
 /* decide and describe */
