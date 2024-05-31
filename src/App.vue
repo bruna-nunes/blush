@@ -195,16 +195,31 @@
         @onClick="clickButtonHandler"
       />
     </div>
-    
+    <hr>
   </div>
-  
+  <blush-badge
+    v-if="isBadgeVisible"
+    text="Badge"
+    variant="neutral-outline"
+    @onDismiss="dismissBadgeHandler"
+    show-dismiss
+  />
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import CompExample from './components/CompExample.vue'
 import blushButton from './components/blush-button/blush-button.vue';
+import blushBadge from './components/blush-badge/blush-badge.vue';
+
+const isBadgeVisible = ref(true)
 
 function clickButtonHandler(event) {
+  console.log(event)
+}
+
+function dismissBadgeHandler(event) {
+  isBadgeVisible.value = false
   console.log(event)
 }
 </script>
