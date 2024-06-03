@@ -23,6 +23,7 @@
     "@storybook/vue3": "^8.1.5",
     "@storybook/vue3-vite": "^8.1.5",
     "@vitejs/plugin-vue": "^5.0.4",
+    "cypress": "^13.10.0",
     "sass": "^1.77.1",
     "storybook": "^8.1.5",
     "vite": "^5.2.0"
