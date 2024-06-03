@@ -8,6 +8,7 @@ Component Library and future Design System. Lightweight and easy to install
 - Vite
 - Sass
 - Storybook
+- Cypress
 
 ## 💻 How to use
 
@@ -22,6 +23,9 @@ Component Library and future Design System. Lightweight and easy to install
 
 ### Start the Storybook server to see components documentation
 `npm run storybook`
+
+### Run the Cypress executable to tests
+`npx cypress open`
 
 ## 🪄 Dependencies
 /* decide and describe */
