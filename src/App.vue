@@ -204,6 +204,18 @@
     @onDismiss="dismissBadgeHandler"
     show-dismiss
   />
+  <hr>
+  <div style="max-width: 400px;">
+    <blush-progress
+      label="Label test"
+      max="80"
+      value="21"
+      showProgressText
+      variant="neutral"
+      size="large"
+    />
+  </div>
+
 </template>
 
 <script setup>
@@ -211,6 +223,7 @@ import { ref } from 'vue'
 import CompExample from './components/CompExample.vue'
 import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
+import blushProgress from './components/blush-progress/blush-progress.vue';
 
 const isBadgeVisible = ref(true)
 

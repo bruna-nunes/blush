@@ -1,0 +1,93 @@
+.blush-progress {
+    .label-indicator {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: spacing(2);
+        padding: 0 spacing(1);
+
+        .label, .indicator {
+            color: map-get($neutral, '001');
+
+            @include typography-label-3;
+        }
+
+        .indicator {
+            margin-left: auto;
+        }
+       
+    }
+
+    .progress {
+        border-radius: map-get($border-radius, 'medium');
+        transition: all 400ms linear;
+
+        .fill {
+            border-radius: map-get($border-radius, 'medium');
+            height: 100%;
+        }
+
+        // ***Colors
+        &.primary {
+            background-color: map-get($primary-absolute, '006');
+
+            .fill {
+                background-color: map-get($primary-absolute, '001');
+            }
+        }
+
+        &.accent {
+            background-color: map-get($accent-absolute, '006');
+
+            .fill {
+                background-color: map-get($accent-absolute, '001');
+            }
+        }
+
+        &.success {
+            background-color: map-get($success-absolute, '006');
+
+            .fill {
+                background-color: map-get($success-absolute, '001');
+            }
+        }
+
+        &.warning {
+            background-color: map-get($warning-absolute, '006');
+
+            .fill {
+                background-color: map-get($warning-absolute, '001');
+            }
+        }
+
+
+        &.danger {
+            background-color: map-get($error-absolute, '006');
+
+            .fill {
+                background-color: map-get($error-absolute, '001');
+            }
+        }
+
+        &.neutral {
+            background-color: map-get($neutral, '011');
+
+            .fill {
+                background-color: map-get($neutral, '001');
+            }
+        }
+
+
+        // ***Sizes
+        &.small {
+            height: 8px;
+        }
+
+        &.medium {
+            height: 12px;
+        }
+
+        &.large {
+            height: 16px;
+        }
+    }
+}
