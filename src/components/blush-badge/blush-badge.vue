@@ -2,7 +2,7 @@
     <span
         :class="classes"
     >
-        {{ props.text }}
+        <span>{{ props.text }}</span>
         <img
             v-if="props.showDismiss"
             src="../../assets/icons/cancel.svg"
@@ -35,7 +35,7 @@ const props = defineProps({
                 'warning', 'warning-outline', 'warning-ghost',
                 'danger', 'danger-outline', 'danger-ghost',
                 'neutral', 'neutral-outline', 'neutral-ghost',
-            ]
+            ].includes(value)
         }
     },
     showDismiss: {
