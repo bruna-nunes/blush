@@ -215,6 +215,14 @@
       size="large"
     />
   </div>
+  <hr>
+  <blush-pagination
+    v-model="currentPage"
+    total-items="101"
+    variant="neutral-outline"
+    @onPageChange="pageChangeHandler"
+  />
+  <p>Current page: {{ currentPage }}</p>
 
 </template>
 
@@ -224,6 +232,7 @@ import CompExample from './components/CompExample.vue'
 import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
+import blushPagination from './components/blush-pagination/blush-pagination.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -234,6 +243,12 @@ function clickButtonHandler(event) {
 function dismissBadgeHandler(event) {
   isBadgeVisible.value = false
   console.log(event)
+}
+
+const currentPage = ref(1)
+
+function pageChangeHandler(page) {
+  console.log('page change handler', page)
 }
 </script>
 
