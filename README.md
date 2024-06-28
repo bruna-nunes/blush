@@ -9,6 +9,7 @@ Component Library and future Design System. Lightweight and easy to install
 - Sass
 - Storybook
 - Cypress
+- GitHub Actions
 
 ## 💻 How to use
 
