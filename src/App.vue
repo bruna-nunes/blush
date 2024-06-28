@@ -215,6 +215,35 @@
       size="large"
     />
   </div>
+  <hr>
+  <blush-card
+    title="Card title"
+    subtitle="Card subtitle"
+    variant="neutral-outline"
+    imageSrc="https://picsum.photos/600/300/?image=25"
+    imageAlt="Alt image card"
+    imagePlacement="top"
+    style="max-width: 20rem;"
+  >
+    <template #header>
+      Header
+    </template>
+    <template #content>
+      Card content
+      <blush-button
+        id="button-card"
+        name="nameButtoncARD"
+        type="button"
+        label="Button card content"
+        variant="primary"
+        size="small"
+        @onClick="clickButtonHandler"
+      />
+    </template>
+    <template #footer>
+      Footer
+    </template>
+  </blush-card>
 
 </template>
 
@@ -224,6 +253,7 @@ import CompExample from './components/CompExample.vue'
 import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
+import blushCard from './components/blush-card/blush-card.vue'
 
 const isBadgeVisible = ref(true)
 
