@@ -244,6 +244,16 @@
       Footer
     </template>
   </blush-card>
+  <hr>
+  <blush-collapse
+    :items="itemsCollapse"
+    title="Title collapse 2"
+    :accordion="true"
+  >
+    <template #content>
+      teste
+    </template>
+  </blush-collapse>
 
 </template>
 
@@ -254,6 +264,7 @@ import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
 import blushCard from './components/blush-card/blush-card.vue'
+import blushCollapse from './components/blush-collapse/blush-collapse.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -265,6 +276,20 @@ function dismissBadgeHandler(event) {
   isBadgeVisible.value = false
   console.log(event)
 }
+
+const itemsCollapse = [
+  {
+    id: 'id1',
+    title: 'title1 collapse',
+    content: 'content1 collapse',
+    opened: true
+  },
+  {
+    id: 'id2',
+    title: 'title2 collapse',
+    content: 'content2 collapse'
+  },
+]
 </script>
 
 <style lang="scss">

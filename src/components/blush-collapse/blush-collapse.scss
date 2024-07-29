@@ -1,0 +1,333 @@
+.blush-collapse {
+    box-sizing: border-box;
+    border-radius: map-get($border-radius, 'small');
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms linear;
+
+    .header {
+        padding: spacing(2) spacing(3) spacing(3);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        .title {
+            margin: 0;
+
+            @include typography-body-2-highlight;
+        }
+
+        .collapse-icon {
+            margin-left: spacing(2);
+            transform: rotate(90deg);
+            transition: all 300ms linear;
+
+            &.active {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+   .main {
+        padding: 0 spacing(3) spacing(2);
+
+        @include typography-body-3;
+   }
+
+   .footer {
+        padding: spacing(2) spacing(3) spacing(3);
+
+        @include typography-body-3;
+    }
+
+    // ***Colors
+    &.primary {
+        background-color: map-get($primary-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($primary-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '013');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '012');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+        }
+    }
+
+    &.primary-outline {
+        background-color: map-get($primary-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '003');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '005');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+        }
+    }
+
+    &.accent {
+        background-color: map-get($accent-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($accent-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '013');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '012');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+        }
+    }
+
+    &.accent-outline {
+        background-color: map-get($accent-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '003');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '005');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+        }
+    }
+
+    &.success {
+        background-color: map-get($success-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($success-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '013');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '012');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+        }
+    }
+
+    &.success-outline {
+        background-color: map-get($success-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '003');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '005');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+        }
+    }
+
+    &.warning {
+        background-color: map-get($warning-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($warning-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '013');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '012');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+        }
+    }
+
+    &.warning-outline {
+        background-color: map-get($warning-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '003');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '005');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+        }
+    }
+
+    &.danger {
+        background-color: map-get($error-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($error-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '013');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '012');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+        }
+    }
+
+    &.danger-outline {
+        background-color: map-get($error-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '003');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '005');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+        }
+    }
+
+    &.neutral {
+        background-color: map-get($neutral, '004');
+        border: map-get($border-width, 'nano') solid map-get($neutral, '007');
+        color: map-get($neutral, '013');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '006');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '013');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '012');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($neutral, '006');
+        }
+    }
+
+    &.neutral-outline {
+        background-color: map-get($neutral, '013');
+        border: map-get($border-width, 'nano') solid map-get($neutral, '011');
+        color: map-get($neutral, '003');
+
+        .header {
+            border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '011');
+        }
+
+        .main {
+            .title {
+                color: map-get($neutral, '003');
+            }
+    
+            .subtitle {
+                color: map-get($neutral, '005');
+            }
+        }
+
+        .footer {
+            border-top: map-get($border-width, 'nano') solid map-get($neutral, '011');
+        }
+    }
+}
