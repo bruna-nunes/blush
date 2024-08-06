@@ -244,6 +244,21 @@
       Footer
     </template>
   </blush-card>
+  <hr>
+  <blush-list
+    :items="listItems"
+    variant="neutral-outline"
+  >
+    <template #header>
+      header
+    </template>
+    <template #item(item1)="{value, item}">
+      Item com template: {{ value }}
+    </template>
+    <template #footer>
+      footer
+    </template>
+  </blush-list>
 
 </template>
 
@@ -254,6 +269,7 @@ import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
 import blushCard from './components/blush-card/blush-card.vue'
+import blushList from './components/blush-list/blush-list.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -265,6 +281,25 @@ function dismissBadgeHandler(event) {
   isBadgeVisible.value = false
   console.log(event)
 }
+
+const listItems = [
+  {
+    key: 'item1',
+    text: 'Item 1'
+  },
+  {
+    key: 'item2',
+    text: 'Item 2'
+  },
+  {
+    key: 'item3',
+    text: 'Item 3'
+  },
+  {
+    key: 'item4',
+    text: 'Item 4'
+  }
+]
 </script>
 
 <style lang="scss">
