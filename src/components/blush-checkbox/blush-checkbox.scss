@@ -1,0 +1,187 @@
+.blush-checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1);
+
+    .input-label {
+        display: flex;
+        align-items: center;
+        gap: spacing(2);
+        transition: all 400ms linear;
+        width: fit-content;
+
+        .input {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            margin: 0;
+            border: map-get($border-width, 'nano') solid map-get($neutral, '010');
+            border-radius: map-get($border-radius, 'small');
+            box-sizing: border-box;
+    
+            &:checked {
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    background-image: url('../../assets/icons/check.svg');
+                    background-position: center;
+                    background-size: 14px;
+                }
+            }
+        }
+    
+        .label {
+            color: map-get($neutral, '004');
+    
+            @include typography-body-2;
+        }
+    }
+
+    .hint {
+        color: map-get($neutral, '007');
+
+        @include typography-label-3;
+    }
+
+    .error {
+        display: flex;
+        align-items: center;
+        gap: spacing(1);
+
+        .icon {
+            filter: map-get($filter, 'danger-001');
+        }
+
+        .text {
+            color: map-get($error-absolute, '001');
+
+            @include typography-label-3;
+        }
+        
+    }
+
+   
+    // ***Colors
+    &.primary {
+        .input-label {
+            .input {
+                &:checked {
+                    background-color: map-get($primary-absolute, '001');
+                    border: map-get($border-width, 'nano') solid map-get($primary-absolute, '007'); 
+    
+                    &::before {
+                        filter: map-get($filter, 'white');
+                    }
+                }
+            }
+        }
+    }
+
+    &.accent {
+        .input-label {
+            .input {
+                &:checked {
+                    background-color: map-get($accent-absolute, '001');
+                    border: map-get($border-width, 'nano') solid map-get($accent-absolute, '007'); 
+
+                    &::before {
+                        filter: map-get($filter, 'white');
+                    }
+                }
+            }
+        }
+    }
+
+    &.success {
+        .input-label {
+            .input {
+                &:checked {
+                    background-color: map-get($success-absolute, '001');
+                    border: map-get($border-width, 'nano') solid map-get($success-absolute, '007'); 
+
+                    &::before {
+                        filter: map-get($filter, 'white');
+                    }
+                }
+            }
+        }
+    }
+
+    &.warning {
+        .input-label {
+            .input {
+                &:checked {
+                    background-color: map-get($warning-absolute, '001');
+                    border: map-get($border-width, 'nano') solid map-get($warning-absolute, '007'); 
+
+                    &::before {
+                        filter: map-get($filter, 'white');
+                    }
+                }
+            }
+        }
+    }
+
+    &.danger {
+        .input-label {
+            .input {
+                &:checked {
+                    background-color: map-get($error-absolute, '001');
+                    border: map-get($border-width, 'nano') solid map-get($error-absolute, '007'); 
+
+                    &::before {
+                        filter: map-get($filter, 'white');
+                    }
+                }
+            }
+        }
+    }
+
+    &.neutral {
+        .input-label {
+            .input {
+                &:checked {
+                    background-color: map-get($neutral, '004');
+                    border: map-get($border-width, 'nano') solid map-get($neutral, '011'); 
+
+                    &::before {
+                        filter: map-get($filter, 'white');
+                    }
+                }
+            }
+        }
+    }
+
+    // ***States
+    &.disabled {
+        .input-label {
+            cursor: not-allowed;
+
+            .input, .label {
+                cursor: not-allowed;
+            }
+
+            .label {
+                color: map-get($neutral, '008');
+            }
+        }
+    }
+
+    &.invalid {
+        .input-label {
+            .input {
+                border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+            }
+        }
+    }
+
+    &.valid {
+        .input-label {
+            .input {
+                border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+            }
+        }
+    }
+}
