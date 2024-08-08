@@ -208,8 +208,8 @@
   <div style="max-width: 400px;">
     <blush-progress
       label="Label test"
-      max="80"
-      value="21"
+      :max="80"
+      :value="21"
       showProgressText
       variant="neutral"
       size="large"
@@ -259,6 +259,20 @@
       footer
     </template>
   </blush-list>
+  <hr>
+  <blush-checkbox
+    v-model="checkboxVModel"
+    value="checkbox1"
+    label="Checkbox 1"
+    variant="neutral"
+    hint-text="Esse é um texto de hint/dica"
+    error-text="Erro genérico"
+    state="invalid"
+    @onChange="changeCheckboxHandler"
+    @onInput="inputCheckboxHandler"
+  />
+  <br>
+  Checkbox: {{ checkboxVModel }}
 
 </template>
 
@@ -270,6 +284,7 @@ import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
 import blushCard from './components/blush-card/blush-card.vue'
 import blushList from './components/blush-list/blush-list.vue';
+import blushCheckbox from './components/blush-checkbox/blush-checkbox.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -300,6 +315,15 @@ const listItems = [
     text: 'Item 4'
   }
 ]
+const checkboxVModel = ref()
+
+function changeCheckboxHandler(event) {
+  console.log('changeCheckboxHandler', event)
+}
+
+function inputCheckboxHandler(event) {
+  console.log('inputCheckboxHandler', event)
+}
 </script>
 
 <style lang="scss">
