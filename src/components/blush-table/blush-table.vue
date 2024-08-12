@@ -8,11 +8,11 @@
                     <th
                         v-if="props.selectable"
                     >
-                        <input
-                            :checked="isAllItemsSelected"
-                            type="checkbox"
+                        <blush-checkbox
+                            :variant="checkboxVariant"
                             :name="props.name"
-                            @change="toggleAllSelectedItems($event.target.checked)"
+                            :checked="isAllItemsSelected"
+                            @onChange="toggleAllSelectedItems($event.target.checked)"
                         />
                     </th>
                     <th
@@ -31,12 +31,19 @@
                     <td
                         v-if="props.selectable"
                     >
-                        <input
+                        <!-- <input
                             v-model="selectedItems"
                             type="checkbox"
                             :name="props.name"
                             :value="item"
                             @change="emitSelectedItemsChange"
+                        /> -->
+                        <blush-checkbox
+                            v-model="selectedItems"
+                            :variant="checkboxVariant"
+                            :name="props.name"
+                            :value="item"
+                            @onChange="emitSelectedItemsChange"
                         />
                     </td>
                     <td
@@ -59,6 +66,7 @@
   
 <script setup>
 import { ref, computed } from 'vue';
+import blushCheckbox from '../blush-checkbox/blush-checkbox.vue';
 
 const props = defineProps({
     name: {
@@ -130,6 +138,10 @@ const classes = computed(() => [
 function emitSelectedItemsChange() {
     emit('selectedItemsChange', JSON.parse(JSON.stringify(selectedItems.value)))
 }
+
+const checkboxVariant = computed(() => {
+    return props.variant.split('-')[0]
+})
 </script>
   
 <style lang="scss">

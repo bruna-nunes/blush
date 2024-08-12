@@ -1,6 +1,7 @@
 .blush-checkbox {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: spacing(1);
 
     .input-label {
