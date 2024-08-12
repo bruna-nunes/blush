@@ -31,13 +31,6 @@
                     <td
                         v-if="props.selectable"
                     >
-                        <!-- <input
-                            v-model="selectedItems"
-                            type="checkbox"
-                            :name="props.name"
-                            :value="item"
-                            @change="emitSelectedItemsChange"
-                        /> -->
                         <blush-checkbox
                             v-model="selectedItems"
                             :variant="checkboxVariant"

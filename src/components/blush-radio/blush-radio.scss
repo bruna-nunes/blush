@@ -1,4 +1,4 @@
-.blush-checkbox {
+.blush-radio {
     display: flex;
     flex-direction: column;
     gap: spacing(1);
@@ -16,7 +16,7 @@
             height: 16px;
             margin: 0;
             border: map-get($border-width, 'nano') solid map-get($neutral, '010');
-            border-radius: map-get($border-radius, 'small');
+            border-radius: map-get($border-radius, 'circle');
             box-sizing: border-box;
     
             &:checked {

@@ -289,6 +289,32 @@
   />
   <br>
   Checkbox: {{ checkboxVModel }}
+  <br><br>
+  <blush-radio
+    v-model="radioVModel"
+    value="radio1"
+    label="Radio 1"
+    variant="neutral"
+    hint-text="Esse é um texto de hint/dica"
+    error-text="Erro genérico"
+    state="normal"
+    @onChange="changeRadioHandler"
+    @onInput="inputRadioHandler"
+  />
+  <br>
+  <blush-radio
+    v-model="radioVModel"
+    value="radio2"
+    label="Radio 2"
+    variant="primary"
+    hint-text="Esse é um texto de hint/dica"
+    error-text="Erro genérico"
+    state="normal"
+    @onChange="changeRadioHandler"
+    @onInput="inputRadioHandler"
+  />
+  <br>
+  Radio: {{ radioVModel }}
 
 </template>
 
@@ -302,6 +328,7 @@ import blushCard from './components/blush-card/blush-card.vue'
 import blushTable from './components/blush-table/blush-table.vue'
 import blushList from './components/blush-list/blush-list.vue';
 import blushCheckbox from './components/blush-checkbox/blush-checkbox.vue';
+import blushRadio from './components/blush-radio/blush-radio.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -384,6 +411,16 @@ function changeCheckboxHandler(event) {
 
 function inputCheckboxHandler(event) {
   console.log('inputCheckboxHandler', event)
+}
+
+const radioVModel = ref()
+
+function changeRadioHandler(event) {
+  console.log('changeRadioHandler', event)
+}
+
+function inputRadioHandler(event) {
+  console.log('inputRadioHandler', event)
 }
 </script>
 
