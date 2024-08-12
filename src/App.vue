@@ -245,6 +245,22 @@
     </template>
   </blush-card>
   <hr>
+  <div style="width: 600px;">
+    <blush-table
+    name="table"
+    :columns="blushTableColumns"
+    :items="blushTableItems"
+    variant="neutral-outline"
+    lines-style="stripped"
+    :selectable="true"
+    @selected-items-change="tableItemsChanged"
+  >
+    <template #cell(name)="{value, item}">
+      Nome com template: <br>{{ value }}
+    </template>
+  </blush-table>
+  </div>
+
   <blush-list
     :items="listItems"
     variant="neutral-outline"
@@ -283,6 +299,7 @@ import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
 import blushCard from './components/blush-card/blush-card.vue'
+import blushTable from './components/blush-table/blush-table.vue'
 import blushList from './components/blush-list/blush-list.vue';
 import blushCheckbox from './components/blush-checkbox/blush-checkbox.vue';
 
@@ -295,6 +312,50 @@ function clickButtonHandler(event) {
 function dismissBadgeHandler(event) {
   isBadgeVisible.value = false
   console.log(event)
+}
+
+const blushTableColumns = [
+   {
+    key: 'name',
+    title: 'Nome'
+   },
+   {
+    key: 'age',
+    title: 'Idade',
+   },
+   {
+    key: 'color',
+    title: 'Cor'
+   },
+   {
+    key: 'number',
+    title: 'Número'
+   }
+]
+
+const blushTableItems = [
+  {
+    name: 'Nome 1',
+    age: '20',
+    color: 'Amarelo',
+    number: '123',
+  },
+  {
+    name: 'Nome 2',
+    age: '30',
+    color: 'Azul',
+    number: '123'
+  },
+  {
+    name: 'Nome 2',
+    age: '40',
+    color: 'Vermelho',
+    number: '123'
+  }
+]
+
+function tableItemsChanged(selectedItems) {
+  console.log(selectedItems)
 }
 
 const listItems = [
