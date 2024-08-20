@@ -315,6 +315,25 @@
   />
   <br>
   Radio: {{ radioVModel }}
+  <br><br>
+  <div style="max-width: 300px;">
+    <blush-input-text
+      v-model="inputTextVModel"
+      value="Input value"
+      label="Input text"
+      size="large"
+      hint-text="Esse é um texto de hint/dica"
+      error-text="Erro genérico"
+      state="normal"
+      placeholder="Placeholder"
+      @onChange="changeInputTextHandler"
+      @onInput="inputInputTextHandler"
+      @onFocus="focusInputTextHandler"
+      @onBlur="blurInputTextHandler"
+    />
+    <br>
+    Input text: {{ inputTextVModel }}
+  </div>
 
 </template>
 
@@ -329,6 +348,7 @@ import blushTable from './components/blush-table/blush-table.vue'
 import blushList from './components/blush-list/blush-list.vue';
 import blushCheckbox from './components/blush-checkbox/blush-checkbox.vue';
 import blushRadio from './components/blush-radio/blush-radio.vue';
+import blushInputText from './components/blush-input-text/blush-input-text.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -422,6 +442,25 @@ function changeRadioHandler(event) {
 function inputRadioHandler(event) {
   console.log('inputRadioHandler', event)
 }
+
+const inputTextVModel = ref('')
+
+function changeInputTextHandler(event) {
+  console.log('changeInputTextHandler', event)
+}
+
+function inputInputTextHandler(event) {
+  console.log('inputInputTextHandler', event)
+}
+
+function focusInputTextHandler(event) {
+  console.log('focusInputTextHandler', event)
+}
+
+function blurInputTextHandler(event) {
+  console.log('blurInputTextHandler', event)
+}
+
 </script>
 
 <style lang="scss">
