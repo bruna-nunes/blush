@@ -1,0 +1,194 @@
+.blush-input-text {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1);
+
+    .input-label {
+        display: flex;
+        flex-direction: column;
+        gap: spacing(1);
+        transition: all 400ms linear;
+        width: 100%;
+
+        .input-content {
+            display: flex;
+            align-items: center;
+            gap: spacing(1);
+            width: 100%;
+
+            .input {
+                width: 100%;
+                border-radius: map-get($border-radius, 'small');
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .hint {
+        color: map-get($neutral, '007');
+
+        @include typography-label-3;
+    }
+
+    .error {
+        display: flex;
+        align-items: center;
+        gap: spacing(1);
+
+        .icon {
+            filter: map-get($filter, 'danger-001');
+        }
+
+        .text {
+            color: map-get($error-absolute, '001');
+
+            @include typography-label-3;
+        }
+        
+    }
+
+    &.neutral {
+        .input-label {
+            .label {
+                color: map-get($neutral, '004');
+            }
+
+            .input-content {
+                .input {
+                    background-color: map-get($neutral, '014');
+                    border: map-get($border-width, 'nano') solid map-get($neutral, '011');
+                    color: map-get($neutral, '005');
+                    
+                    &::placeholder {
+                        color: map-get($neutral, '007');
+                    }
+    
+                    &:focus {
+                        outline-color: map-get($neutral, '005');
+                    }
+
+                    &:read-only {
+                        background-color: map-get($neutral, '013');
+                        border: map-get($border-width, 'nano') solid map-get($neutral, '010');
+                        color: map-get($neutral, '008');
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+
+    // ***States
+    &.disabled {
+        .input-label {
+            cursor: not-allowed;
+
+            .input, .label {
+                cursor: not-allowed;
+            }
+
+            .label {
+                color: map-get($neutral, '007');
+            }
+            
+            .input {
+                background-color: map-get($neutral, '013');
+                border: map-get($border-width, 'nano') solid map-get($neutral, '010');
+                color: map-get($neutral, '008');
+            }
+        }
+    }
+
+    &.invalid {
+        .input-label {
+            .input-content {
+                .input {
+                    background-color: map-get($error-absolute, '007');
+                    border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+    
+                    &:focus {
+                        background-color: map-get($neutral, '014');
+                        border: map-get($border-width, 'nano') solid map-get($neutral, '011');
+                    }
+                }
+
+                .state-icon {
+                    filter: map-get($filter, 'danger-001');
+                }  
+            }
+        }
+    }
+
+    &.valid {
+        .input-label {
+            .input-content {
+                .input {
+                    background-color: map-get($success-absolute, '007');
+                    border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+    
+                    &:focus {
+                        background-color: map-get($neutral, '014');
+                        border: map-get($border-width, 'nano') solid map-get($neutral, '011');
+                    }
+                }
+
+                .state-icon {
+                    filter: map-get($filter, 'success-001');
+                }
+            }
+            
+        }
+    }
+
+    // ***Sizes
+    &.small {
+        .input-label {
+            .label {
+                @include typography-label-3;
+            }
+
+            .input-content {
+                .input {
+                    height: 28px;
+                    padding: spacing(2);
+    
+                    @include typography-label-3;
+                }
+            }
+        }
+    }
+
+    &.medium {
+        .input-label {
+            .label {
+                @include typography-label-2;
+            }
+
+            .input-content {
+                .input {
+                    height: 32px;
+                    padding: spacing(2) spacing(3);
+    
+                    @include typography-label-2;
+                }
+            }
+        }
+    }
+
+    &.large {
+        .input-label {
+            .label {
+                @include typography-label-1;
+            }
+
+            .input-content {
+                .input {
+                    height: 36px;
+                    padding: spacing(3) spacing(2);
+    
+                    @include typography-label-1;
+                }
+            }
+        }
+    }
+}
