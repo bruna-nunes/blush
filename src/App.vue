@@ -334,6 +334,42 @@
     <br>
     Input text: {{ inputTextVModel }}
   </div>
+  <br>
+  <blush-button
+    id="button-modal"
+    name="button-modal"
+    type="button"
+    label="Abrir modal"
+    variant="primary"
+    size="large"
+    @onClick="openModalHandler"
+  />
+  <blush-modal
+    :is-open="modalIsOpen"
+    :show-dismiss-button="true"
+    :close-outside="true"
+    variant="neutral-outline"
+    @onClose="closeModalHandler"
+    @onOpen="console.log('modal open')"
+  >
+    <template #header>
+      Header
+    </template>
+    <template #content>
+      Content
+      <br><br>
+      <blush-badge
+        v-if="isBadgeVisible"
+        text="Badge"
+        variant="neutral-outline"
+        @onDismiss="dismissBadgeHandler"
+        show-dismiss
+      />
+    </template>
+    <template #footer>
+      Footer
+    </template>
+  </blush-modal>  
 
 </template>
 
@@ -349,6 +385,7 @@ import blushList from './components/blush-list/blush-list.vue';
 import blushCheckbox from './components/blush-checkbox/blush-checkbox.vue';
 import blushRadio from './components/blush-radio/blush-radio.vue';
 import blushInputText from './components/blush-input-text/blush-input-text.vue';
+import blushModal from './components/blush-modal/blush-modal.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -459,6 +496,16 @@ function focusInputTextHandler(event) {
 
 function blurInputTextHandler(event) {
   console.log('blurInputTextHandler', event)
+}
+
+const modalIsOpen = ref(false)
+
+function openModalHandler() {
+  modalIsOpen.value = true
+}
+
+function closeModalHandler() {
+  modalIsOpen.value = false
 }
 
 </script>
