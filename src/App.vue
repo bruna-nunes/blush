@@ -370,6 +370,14 @@
       Footer
     </template>
   </blush-modal>  
+  <hr>
+  <blush-alert
+    title="Alert"
+    text="Description alert"
+    type="informative"
+    :show-dismiss="true"
+    @onDismiss="console.log('dismiss alert')"
+  />
 
 </template>
 
@@ -386,6 +394,7 @@ import blushCheckbox from './components/blush-checkbox/blush-checkbox.vue';
 import blushRadio from './components/blush-radio/blush-radio.vue';
 import blushInputText from './components/blush-input-text/blush-input-text.vue';
 import blushModal from './components/blush-modal/blush-modal.vue';
+import blushAlert from './components/blush-alert/blush-alert.vue';
 
 const isBadgeVisible = ref(true)
 
