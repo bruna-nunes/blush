@@ -378,6 +378,15 @@
     :show-dismiss="true"
     @onDismiss="console.log('dismiss alert')"
   />
+  <h1>Breadcrumb</h1>
+  <blush-breadcrumb
+    :items="breadcrumbItems"
+    separator-style="chevron"
+    variant="primary"
+  />
+  <main>
+    <RouterView />
+  </main>
 
 </template>
 
@@ -395,6 +404,7 @@ import blushRadio from './components/blush-radio/blush-radio.vue';
 import blushInputText from './components/blush-input-text/blush-input-text.vue';
 import blushModal from './components/blush-modal/blush-modal.vue';
 import blushAlert from './components/blush-alert/blush-alert.vue';
+import blushBreadcrumb from './components/blush-breadcrumb/blush-breadcrumb.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -516,6 +526,18 @@ function openModalHandler() {
 function closeModalHandler() {
   modalIsOpen.value = false
 }
+
+const breadcrumbItems = [
+  {
+    text: 'Google',
+    href: 'https://google.com',
+    active: true
+  },
+  {
+    text: 'Card 1',
+    toRoute: '/card1'
+  }
+]
 
 </script>
 
