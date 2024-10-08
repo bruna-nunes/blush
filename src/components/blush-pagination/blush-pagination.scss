@@ -16,6 +16,10 @@
 
         @include typography-label-1;
     }
+
+    .dots {
+        @include typography-label-1;
+    }
    
     // ***Colors
     &.primary {
@@ -28,6 +32,10 @@
                 color: map-get($neutral, '013');
             }
         }
+
+        .dots { 
+            color: map-get($primary-absolute, '001'); 
+        }
     }
 
     &.primary-outline {
@@ -38,6 +46,10 @@
             &.active {
                 border: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
             }
+        }
+
+        .dots { 
+            color: map-get($primary-absolute, '001'); 
         }
     }
 
@@ -50,7 +62,11 @@
                 background-color: map-get($accent-absolute, '001');
                 color: map-get($neutral, '013');
             }
-        } 
+        }
+
+        .dots { 
+            color: map-get($accent-absolute, '001'); 
+        }
     }
 
     &.accent-outline {
@@ -61,6 +77,10 @@
             &.active {
                 border: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
             }
+        }
+
+        .dots { 
+            color: map-get($accent-absolute, '001'); 
         }
     }
 
@@ -74,6 +94,10 @@
                 color: map-get($neutral, '013');
             }
         }
+
+        .dots { 
+            color: map-get($success-absolute, '001'); 
+        }
     }
 
     &.success-outline {
@@ -84,6 +108,10 @@
             &.active {
                 border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
             }
+        }
+
+        .dots { 
+            color: map-get($success-absolute, '001'); 
         }
     }
 
@@ -97,6 +125,10 @@
                 color: map-get($neutral, '013');
             }
         }
+
+        .dots { 
+            color: map-get($warning-absolute, '001'); 
+        }
     }
 
     &.warning-outline {
@@ -107,6 +139,10 @@
             &.active {
                 border: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
             }
+        }
+
+        .dots { 
+            color: map-get($warning-absolute, '001'); 
         }
     }
 
@@ -120,6 +156,10 @@
                 color: map-get($neutral, '013');
             }
         }
+
+        .dots { 
+            color: map-get($error-absolute, '001'); 
+        }
     }
 
     &.danger-outline {
@@ -130,6 +170,10 @@
             &.active {
                 border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
             }
+        }
+
+        .dots { 
+            color: map-get($error-absolute, '001'); 
         }
     }
 
@@ -143,6 +187,10 @@
                 color: map-get($neutral, '013');
             }
         }
+
+        .dots { 
+            color: map-get($neutral, '004');
+        }
     }
 
     &.neutral-outline {
@@ -153,6 +201,10 @@
             &.active {
                 border: map-get($border-width, 'nano') solid map-get($neutral, '004');
             }
+        }
+
+        .dots { 
+            color: map-get($neutral, '004');
         }
     }
 }

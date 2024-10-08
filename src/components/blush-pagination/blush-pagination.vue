@@ -1,6 +1,7 @@
 <template>
     <div :class="classes">
-        <!-- <button
+        <button
+            v-if="displayFirstPage"
             type="button"
             :class="getPageClasses(1)"
             @click="setPage(1)"
@@ -9,9 +10,10 @@
         </button>
         <div
             v-if="displayDotsBefore"
+            class="dots"
         >
             ...
-        </div> -->
+        </div>
         <button
             v-for="page in pagesToDisplay"
             :key="page"
@@ -21,18 +23,20 @@
         >
             {{ page }}
         </button>
-        <!-- <div
+        <div
             v-if="displayDotsAfter"
+            class="dots"
         >
             ...
         </div>
         <button
+            v-if="displayLastPage"
             type="button"
             :class="getPageClasses(totalPages)"
             @click="setPage(totalPages)"
         >
             {{ totalPages }}
-        </button> -->
+        </button>
     </div>
 </template>
   
@@ -107,24 +111,38 @@ const totalPages = computed(() => {
 const quantityPagesToDisplayBeforeFowardCurrent = 2
 
 const pagesToDisplay = computed(() => {
+    const pages = []
+    let start = currentPageModel.value - quantityPagesToDisplayBeforeFowardCurrent
+    let end = currentPageModel.value + quantityPagesToDisplayBeforeFowardCurrent
 
-    if (totalPages.value <= 5) {
-        return totalPages.value
+    if(start < 1) {
+        const startOffset = 1 - start
+        start += startOffset
+        end += startOffset
     }
 
-    const pages = []
-    const start = Math.max(currentPageModel.value - quantityPagesToDisplayBeforeFowardCurrent, 2)
-    const end = Math.min(currentPageModel.value + quantityPagesToDisplayBeforeFowardCurrent, totalPages.value)
+    if(end > totalPages.value) {
+        const endOffset = end - totalPages.value
+        start = Math.max(1, start - endOffset)
+        end -= endOffset
+    }
 
-    console.log(start, end, 'startend')
-    for(let i = start; i <= end; i++) {
-        pages.push(i)
+    for(let pageNumber = start; pageNumber <= end; pageNumber++) {
+        pages.push(pageNumber)
     }
     return pages
-    // if (totalPages.value <= 5) {
-    //     return totalPages.slice(1, totalPages.value -1)
-    // }
+})
 
+const displayFirstPage = computed(() => {
+    return (
+        pagesToDisplay.value[0] > 1 && (currentPageModel.value - quantityPagesToDisplayBeforeFowardCurrent) > 1
+    )
+})
+
+const displayLastPage = computed(() => {
+    return (
+        pagesToDisplay.value[pagesToDisplay.value.length - 1] < totalPages.value && (currentPageModel.value + quantityPagesToDisplayBeforeFowardCurrent) < totalPages.value
+    )
 })
 
 const displayDotsBefore = computed(() => {

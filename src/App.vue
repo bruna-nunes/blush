@@ -219,7 +219,7 @@
   <blush-pagination
     v-model="currentPage"
     total-items="101"
-    variant="neutral-outline"
+    variant="primary"
     @onPageChange="pageChangeHandler"
   />
   <p>Current page: {{ currentPage }}</p>
