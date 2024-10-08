@@ -1,0 +1,103 @@
+.blush-alert {
+    box-sizing: border-box;
+    border-radius: map-get($border-radius, 'small');
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    width: 475px;
+    max-width: 100%;
+    max-width: 475px;
+    padding: spacing(3);
+    gap: spacing(3);
+    transition: all 400ms linear;
+
+    background-color: map-get($neutral, '013');
+    border-left-width: map-get($border-width, 'small');
+    border-left-style: solid;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: spacing(1);
+        flex-grow: 1;
+
+        .title {
+            margin: 0;
+
+            @include typography-title-6;
+        }
+
+        .text {
+            color: map-get($neutral, '003');
+            margin: 0;
+
+            @include typography-body-2;
+        }
+    }
+
+    &.dismissible {
+
+        .dismiss-icon {
+            cursor: pointer;
+
+            filter:  map-get($filter, 'neutral-005');
+        }
+    }
+   
+    // ***Colors
+    &.success {
+        border-left-color: map-get($success-absolute, '001');
+
+        .icon {
+            filter:  map-get($filter, 'success-001');
+        }
+
+        .content {
+            .title {
+                color: map-get($success-absolute, '001');
+            }
+        }
+    }
+
+    &.warning {
+        border-left-color: map-get($warning-absolute, '001');
+
+        .icon {
+            filter:  map-get($filter, 'warning-001');
+        }
+
+        .content {
+            .title {
+                color: map-get($warning-absolute, '001');
+            }
+        }
+    }
+
+    &.error {
+        border-left-color: map-get($error-absolute, '001');
+
+        .icon {
+            filter:  map-get($filter, 'danger-001');
+        }
+
+        .content {
+            .title {
+                color: map-get($error-absolute, '001');
+            }
+        }
+    }
+
+    &.informative {
+        border-left-color: map-get($neutral, '004');
+
+        .icon {
+            filter:  map-get($filter, 'neutral-004');
+        }
+
+        .content {
+            .title {
+                color: map-get($neutral, '004');
+            }
+        }
+    }
+}
