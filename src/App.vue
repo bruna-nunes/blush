@@ -220,6 +220,7 @@
     v-model="currentPage"
     total-items="101"
     variant="primary"
+    prev-next-style="arrow"
     @onPageChange="pageChangeHandler"
   />
   <p>Current page: {{ currentPage }}</p>

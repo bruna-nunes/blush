@@ -20,6 +20,34 @@
     .dots {
         @include typography-label-1;
     }
+
+    .prev, .next {
+        border: none;
+        background-color: transparent;
+        width: 32px;
+        height: 32px;
+        padding: spacing(2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:not(:disabled) {
+            cursor: pointer;
+        }
+
+
+        &:disabled {
+            opacity: map-get($opacity, 'medium');
+        }
+
+        @include typography-label-1;
+    }
+
+    .prev {
+        img {
+            transform: rotate(-180deg);
+        }
+    }
    
     // ***Colors
     &.primary {
@@ -36,6 +64,10 @@
         .dots { 
             color: map-get($primary-absolute, '001'); 
         }
+
+        .prev, .next {
+            filter: map-get($filter, 'primary-001');;
+        }
     }
 
     &.primary-outline {
@@ -50,6 +82,10 @@
 
         .dots { 
             color: map-get($primary-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'primary-001');;
         }
     }
 
@@ -67,6 +103,10 @@
         .dots { 
             color: map-get($accent-absolute, '001'); 
         }
+
+        .prev, .next {
+            filter: map-get($filter, 'accent-001');;
+        }
     }
 
     &.accent-outline {
@@ -81,6 +121,10 @@
 
         .dots { 
             color: map-get($accent-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'accent-001');;
         }
     }
 
@@ -98,6 +142,10 @@
         .dots { 
             color: map-get($success-absolute, '001'); 
         }
+
+        .prev, .next {
+            filter: map-get($filter, 'success-001');;
+        }
     }
 
     &.success-outline {
@@ -112,6 +160,10 @@
 
         .dots { 
             color: map-get($success-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'success-001');;
         }
     }
 
@@ -129,6 +181,10 @@
         .dots { 
             color: map-get($warning-absolute, '001'); 
         }
+
+        .prev, .next {
+            filter: map-get($filter, 'warning-001');;
+        }
     }
 
     &.warning-outline {
@@ -143,6 +199,10 @@
 
         .dots { 
             color: map-get($warning-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'warning-001');;
         }
     }
 
@@ -160,6 +220,10 @@
         .dots { 
             color: map-get($error-absolute, '001'); 
         }
+
+        .prev, .next {
+            filter: map-get($filter, 'danger-001');;
+        }
     }
 
     &.danger-outline {
@@ -174,6 +238,10 @@
 
         .dots { 
             color: map-get($error-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'danger-001');;
         }
     }
 
@@ -191,6 +259,10 @@
         .dots { 
             color: map-get($neutral, '004');
         }
+
+        .prev, .next {
+            filter: map-get($filter, 'neutral-004');;
+        }
     }
 
     &.neutral-outline {
@@ -205,6 +277,10 @@
 
         .dots { 
             color: map-get($neutral, '004');
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'neutral-004');;
         }
     }
 }

@@ -1,6 +1,25 @@
 <template>
     <div :class="classes">
         <button
+            type="button"
+            class="prev"
+            :disabled="currentPageModel === 1"
+            @click="setPage(currentPageModel - 1)"
+        >
+            <img
+                v-if="props.prevNextStyle === 'arrow'"
+                src="../../assets/icons/arrow.svg"
+                width="24"
+                height="24"
+                alt="Anterior"
+            >
+            <p
+                v-if="props.prevNextStyle === 'text'"
+            >
+               {{ props.prevText }}
+            </p>
+        </button>
+        <button
             v-if="displayFirstPage"
             type="button"
             :class="getPageClasses(1)"
@@ -37,6 +56,25 @@
         >
             {{ totalPages }}
         </button>
+        <button
+            type="button"
+            class="next"
+            :disabled="currentPageModel === totalPages"
+            @click="setPage(currentPageModel + 1)"
+        >
+            <img
+                v-if="props.prevNextStyle === 'arrow'"
+                src="../../assets/icons/arrow.svg"
+                width="24"
+                height="24"
+                alt="Próximo"
+            >
+            <p
+                v-if="props.prevNextStyle === 'text'"
+            >
+               {{ props.nextText }}
+            </p>
+    </button>
     </div>
 </template>
   
