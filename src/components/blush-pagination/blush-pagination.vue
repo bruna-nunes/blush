@@ -123,7 +123,7 @@ const props = defineProps({
 
 const emit = defineEmits(['onPageChange'])
 
-const currentPageModel = defineModel()
+const currentPageModel = defineModel({ default: 1 })
 
 const classes = computed(() => [
     'blush-pagination',
