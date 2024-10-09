@@ -1,0 +1,285 @@
+.blush-pagination {
+    display: flex;
+    gap: spacing(2);
+
+    .page {
+        width: 32px;
+        height: 32px;
+        padding: spacing(2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: map-get($border-radius, 'small');
+        transition: all 400ms linear;
+        cursor: pointer;
+
+        @include typography-label-1;
+    }
+
+    .dots {
+        @include typography-label-1;
+    }
+
+    .prev, .next {
+        border: none;
+        background-color: transparent;
+        height: 32px;
+        padding: spacing(2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:not(:disabled) {
+            cursor: pointer;
+        }
+
+
+        &:disabled {
+            opacity: map-get($opacity, 'medium');
+        }
+
+        @include typography-label-1;
+    }
+
+    .prev {
+        img {
+            transform: rotate(-180deg);
+        }
+    }
+   
+    // ***Colors
+    &.primary {
+        .page {
+            background-color: map-get($primary-absolute, '007');
+            color: map-get($primary-absolute, '001');
+
+            &.active {
+                background-color: map-get($primary-absolute, '001');
+                color: map-get($neutral, '013');
+            }
+        }
+
+        .dots { 
+            color: map-get($primary-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'primary-001');;
+        }
+    }
+
+    &.primary-outline {
+        .page {
+            background-color: map-get($primary-absolute, '007');
+            color: map-get($primary-absolute, '001');
+
+            &.active {
+                border: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+            }
+        }
+
+        .dots { 
+            color: map-get($primary-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'primary-001');;
+        }
+    }
+
+    &.accent {
+        .page {
+            background-color: map-get($accent-absolute, '007');
+            color: map-get($accent-absolute, '001');
+    
+            &.active {
+                background-color: map-get($accent-absolute, '001');
+                color: map-get($neutral, '013');
+            }
+        }
+
+        .dots { 
+            color: map-get($accent-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'accent-001');;
+        }
+    }
+
+    &.accent-outline {
+        .page {
+            background-color: map-get($accent-absolute, '007');
+            color: map-get($accent-absolute, '001');
+
+            &.active {
+                border: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+            }
+        }
+
+        .dots { 
+            color: map-get($accent-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'accent-001');;
+        }
+    }
+
+    &.success {
+        .page {
+            background-color: map-get($success-absolute, '007');
+            color: map-get($success-absolute, '001');
+    
+            &.active {
+                background-color: map-get($success-absolute, '001');
+                color: map-get($neutral, '013');
+            }
+        }
+
+        .dots { 
+            color: map-get($success-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'success-001');;
+        }
+    }
+
+    &.success-outline {
+        .page {
+            background-color: map-get($success-absolute, '007');
+            color: map-get($success-absolute, '001');
+
+            &.active {
+                border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+            }
+        }
+
+        .dots { 
+            color: map-get($success-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'success-001');;
+        }
+    }
+
+    &.warning {
+        .page {
+            background-color: map-get($warning-absolute, '007');
+            color: map-get($warning-absolute, '001');
+    
+            &.active {
+                background-color: map-get($warning-absolute, '001');
+                color: map-get($neutral, '013');
+            }
+        }
+
+        .dots { 
+            color: map-get($warning-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'warning-001');;
+        }
+    }
+
+    &.warning-outline {
+        .page {
+            background-color: map-get($warning-absolute, '007');
+            color: map-get($warning-absolute, '001');
+
+            &.active {
+                border: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+            }
+        }
+
+        .dots { 
+            color: map-get($warning-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'warning-001');;
+        }
+    }
+
+    &.danger {
+        .page {
+            background-color: map-get($error-absolute, '007');
+            color: map-get($error-absolute, '001');
+    
+            &.active {
+                background-color: map-get($error-absolute, '001');
+                color: map-get($neutral, '013');
+            }
+        }
+
+        .dots { 
+            color: map-get($error-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'danger-001');;
+        }
+    }
+
+    &.danger-outline {
+        .page {
+            background-color: map-get($error-absolute, '007');
+            color: map-get($error-absolute, '001');
+
+            &.active {
+                border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+            }
+        }
+
+        .dots { 
+            color: map-get($error-absolute, '001'); 
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'danger-001');;
+        }
+    }
+
+    &.neutral {
+        .page {
+            background-color: map-get($neutral, '012');
+            color: map-get($neutral, '004');
+    
+            &.active {
+                background-color: map-get($neutral, '004');
+                color: map-get($neutral, '013');
+            }
+        }
+
+        .dots { 
+            color: map-get($neutral, '004');
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'neutral-004');;
+        }
+    }
+
+    &.neutral-outline {
+        .page {
+            background-color: map-get($neutral, '012');
+            color: map-get($neutral, '004');
+
+            &.active {
+                border: map-get($border-width, 'nano') solid map-get($neutral, '004');
+            }
+        }
+
+        .dots { 
+            color: map-get($neutral, '004');
+        }
+
+        .prev, .next {
+            filter: map-get($filter, 'neutral-004');;
+        }
+    }
+}

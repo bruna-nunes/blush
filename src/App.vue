@@ -216,6 +216,14 @@
     />
   </div>
   <hr>
+  <blush-pagination
+    v-model="currentPage"
+    total-items="101"
+    variant="primary"
+    prev-next-style="arrow"
+    @onPageChange="pageChangeHandler"
+  />
+  <p>Current page: {{ currentPage }}</p>
   <blush-card
     title="Card title"
     subtitle="Card subtitle"
@@ -396,6 +404,7 @@ import CompExample from './components/CompExample.vue'
 import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
+import blushPagination from './components/blush-pagination/blush-pagination.vue';
 import blushCard from './components/blush-card/blush-card.vue'
 import blushTable from './components/blush-table/blush-table.vue'
 import blushList from './components/blush-list/blush-list.vue';
@@ -417,6 +426,11 @@ function dismissBadgeHandler(event) {
   console.log(event)
 }
 
+const currentPage = ref(1)
+
+function pageChangeHandler(page) {
+  console.log('page change handler', page)
+}
 const blushTableColumns = [
    {
     key: 'name',
