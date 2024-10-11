@@ -395,6 +395,10 @@
   <main>
     <RouterView />
   </main>
+  <hr>
+  <blush-tooltip title="title" content="conteudo tooltip" placement="bottom">
+    <h1>Tooltip</h1>
+  </blush-tooltip>
 
 </template>
 
@@ -414,6 +418,7 @@ import blushInputText from './components/blush-input-text/blush-input-text.vue';
 import blushModal from './components/blush-modal/blush-modal.vue';
 import blushAlert from './components/blush-alert/blush-alert.vue';
 import blushBreadcrumb from './components/blush-breadcrumb/blush-breadcrumb.vue';
+import blushTooltip from './components/blush-tooltip/blush-tooltip.vue';
 
 const isBadgeVisible = ref(true)
 

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@cypress/vue": "^6.0.1",
+    "cypress-real-events": "^1.13.0",
     "vue": "^3.4.21",
     "vue-router": "^4.4.3"
   },
