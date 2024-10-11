@@ -1,7 +1,6 @@
 # Blush
 
-Component Library and future Design System. Lightweight and easy to install
-
+Component Library and future Design System.
 ## 🧰 Tools and Technologies used
 
 - Vue
