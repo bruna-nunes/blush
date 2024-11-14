@@ -400,20 +400,25 @@
     <h1>Tooltip</h1>
   </blush-tooltip>
   <blush-collapse
-    :items="itemsCollapse"
-    title="Title collapse 2"
-    :accordion="true"
+    title="Title collapse 1"
+    name="collapse-accordion"
+    variant="neutral-outline"
+    @onChangeCollapseVisibility="onChangeCollapseVisibility"
   >
-    <template #content>
-      teste
-    </template>
+      conteudo collapse
+  </blush-collapse>
+  <blush-collapse
+    title="Title collapse 2"
+    name="collapse-accordion"
+    :opened="true"
+  >
+      conteudo collapse
   </blush-collapse>
 
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import CompExample from './components/CompExample.vue'
 import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
@@ -568,19 +573,9 @@ const breadcrumbItems = [
   }
 ]
 
-const itemsCollapse = [
-  {
-    id: 'id1',
-    title: 'title1 collapse',
-    content: 'content1 collapse',
-    opened: true
-  },
-  {
-    id: 'id2',
-    title: 'title2 collapse',
-    content: 'content2 collapse'
-  },
-]
+function onChangeCollapseVisibility(collapseName) {
+  console.log(collapseName)
+}
 
 </script>
 
