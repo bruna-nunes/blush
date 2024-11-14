@@ -1,0 +1,133 @@
+<template>
+    <div :class="classes">
+        <div class="input-label">
+            <input
+                v-model="checkboxModel"
+                type="checkbox"
+                :value="props.value"
+                :name="props.name"
+                :id="props.id"
+                :true-value="props.value"
+                :disabled="props.disabled"
+                :checked="props.checked"
+                :required="props.required"
+                :autofocus="props.autofocus"
+                class="input"
+                @change="emit('onChange', $event)"
+                @input="emit('onInput', $event)"
+            >
+            <label
+                v-if="props.label"
+                :for="props.id"
+                class="label"
+            >
+                {{ props.label }}
+            </label>
+        </div>
+        <div
+            v-if="props.hintText"
+            class="hint"
+        >
+            {{ props.hintText }}
+        </div>
+        <div
+            v-if="props.errorText"
+            class="error"
+        >
+            <img
+                src="../../assets/icons/exclamation.svg"
+                alt="Círculo com exclamação"
+                width="14"
+                height="14"
+                class="icon"
+            >
+            <span class="text">
+                {{ props.errorText }}
+            </span>
+        </div>
+    </div>
+
+</template>
+  
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+    value: {
+        type: [String, Number, Object],
+        required: true,
+    },
+    id: {
+        type: String,
+    },
+    name: {
+        type: String,
+    },
+    label: {
+        type: String,
+    },
+    variant: {
+        type: String,
+        default: 'primary',
+        validator(value) {
+            return [
+                'primary',
+                'accent', 
+                'success',
+                'warning',
+                'danger', 
+                'neutral',
+            ].includes(value)
+        }
+    },
+    state: {
+        type: String,
+        default: 'normal',
+        validator(value) {
+            return [
+                'valid',
+                'invalid', 
+                'normal',
+            ].includes(value)
+        }
+    },
+    disabled: {
+        type: Boolean,
+        default: false
+    },
+    required: {
+        type: Boolean,
+        default: false
+    },
+    checked: {
+        type: Boolean,
+        default: false,
+    },
+    hintText: {
+        type: String,
+    },
+    errorText: {
+        type: String,
+    },
+    autofocus: {
+        type: Boolean,
+        default: false
+    },
+})
+
+const checkboxModel = defineModel()
+
+const emit = defineEmits(['onChange', 'onInput'])
+
+const classes = computed(() => [
+    'blush-checkbox',
+    props.variant,
+    props.state,
+    props.disabled ? 'disabled' : ''
+])
+
+</script>
+  
+<style lang="scss">
+    @import './blush-checkbox.scss';
+</style>

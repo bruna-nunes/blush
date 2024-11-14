@@ -208,14 +208,22 @@
   <div style="max-width: 400px;">
     <blush-progress
       label="Label test"
-      max="80"
-      value="21"
+      :max="80"
+      :value="21"
       showProgressText
       variant="neutral"
       size="large"
     />
   </div>
   <hr>
+  <blush-pagination
+    v-model="currentPage"
+    total-items="101"
+    variant="primary"
+    prev-next-style="arrow"
+    @onPageChange="pageChangeHandler"
+  />
+  <p>Current page: {{ currentPage }}</p>
   <blush-card
     title="Card title"
     subtitle="Card subtitle"
@@ -245,6 +253,152 @@
     </template>
   </blush-card>
   <hr>
+  <div style="width: 600px;">
+    <blush-table
+    name="table"
+    :columns="blushTableColumns"
+    :items="blushTableItems"
+    variant="neutral-outline"
+    lines-style="stripped"
+    :selectable="true"
+    @selected-items-change="tableItemsChanged"
+  >
+    <template #cell(name)="{value, item}">
+      Nome com template: <br>{{ value }}
+    </template>
+  </blush-table>
+  </div>
+
+  <blush-list
+    :items="listItems"
+    variant="neutral-outline"
+  >
+    <template #header>
+      header
+    </template>
+    <template #item(item1)="{value, item}">
+      Item com template: {{ value }}
+    </template>
+    <template #footer>
+      footer
+    </template>
+  </blush-list>
+  <hr>
+  <blush-checkbox
+    v-model="checkboxVModel"
+    value="checkbox1"
+    label="Checkbox 1"
+    variant="neutral"
+    hint-text="Esse é um texto de hint/dica"
+    error-text="Erro genérico"
+    state="invalid"
+    @onChange="changeCheckboxHandler"
+    @onInput="inputCheckboxHandler"
+  />
+  <br>
+  Checkbox: {{ checkboxVModel }}
+  <br><br>
+  <blush-radio
+    v-model="radioVModel"
+    value="radio1"
+    label="Radio 1"
+    variant="neutral"
+    hint-text="Esse é um texto de hint/dica"
+    error-text="Erro genérico"
+    state="normal"
+    @onChange="changeRadioHandler"
+    @onInput="inputRadioHandler"
+  />
+  <br>
+  <blush-radio
+    v-model="radioVModel"
+    value="radio2"
+    label="Radio 2"
+    variant="primary"
+    hint-text="Esse é um texto de hint/dica"
+    error-text="Erro genérico"
+    state="normal"
+    @onChange="changeRadioHandler"
+    @onInput="inputRadioHandler"
+  />
+  <br>
+  Radio: {{ radioVModel }}
+  <br><br>
+  <div style="max-width: 300px;">
+    <blush-input-text
+      v-model="inputTextVModel"
+      value="Input value"
+      label="Input text"
+      size="large"
+      hint-text="Esse é um texto de hint/dica"
+      error-text="Erro genérico"
+      state="normal"
+      placeholder="Placeholder"
+      @onChange="changeInputTextHandler"
+      @onInput="inputInputTextHandler"
+      @onFocus="focusInputTextHandler"
+      @onBlur="blurInputTextHandler"
+    />
+    <br>
+    Input text: {{ inputTextVModel }}
+  </div>
+  <br>
+  <blush-button
+    id="button-modal"
+    name="button-modal"
+    type="button"
+    label="Abrir modal"
+    variant="primary"
+    size="large"
+    @onClick="openModalHandler"
+  />
+  <blush-modal
+    :is-open="modalIsOpen"
+    :show-dismiss-button="true"
+    :close-outside="true"
+    variant="neutral-outline"
+    @onClose="closeModalHandler"
+    @onOpen="console.log('modal open')"
+  >
+    <template #header>
+      Header
+    </template>
+    <template #content>
+      Content
+      <br><br>
+      <blush-badge
+        v-if="isBadgeVisible"
+        text="Badge"
+        variant="neutral-outline"
+        @onDismiss="dismissBadgeHandler"
+        show-dismiss
+      />
+    </template>
+    <template #footer>
+      Footer
+    </template>
+  </blush-modal>  
+  <hr>
+  <blush-alert
+    title="Alert"
+    text="Description alert"
+    type="informative"
+    :show-dismiss="true"
+    @onDismiss="console.log('dismiss alert')"
+  />
+  <h1>Breadcrumb</h1>
+  <blush-breadcrumb
+    :items="breadcrumbItems"
+    separator-style="chevron"
+    variant="primary"
+  />
+  <main>
+    <RouterView />
+  </main>
+  <hr>
+  <blush-tooltip title="title" content="conteudo tooltip" placement="bottom">
+    <h1>Tooltip</h1>
+  </blush-tooltip>
   <blush-collapse
     :items="itemsCollapse"
     title="Title collapse 2"
@@ -263,7 +417,17 @@ import CompExample from './components/CompExample.vue'
 import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
+import blushPagination from './components/blush-pagination/blush-pagination.vue';
 import blushCard from './components/blush-card/blush-card.vue'
+import blushTable from './components/blush-table/blush-table.vue'
+import blushList from './components/blush-list/blush-list.vue';
+import blushCheckbox from './components/blush-checkbox/blush-checkbox.vue';
+import blushRadio from './components/blush-radio/blush-radio.vue';
+import blushInputText from './components/blush-input-text/blush-input-text.vue';
+import blushModal from './components/blush-modal/blush-modal.vue';
+import blushAlert from './components/blush-alert/blush-alert.vue';
+import blushBreadcrumb from './components/blush-breadcrumb/blush-breadcrumb.vue';
+import blushTooltip from './components/blush-tooltip/blush-tooltip.vue';
 import blushCollapse from './components/blush-collapse/blush-collapse.vue';
 
 const isBadgeVisible = ref(true)
@@ -276,6 +440,133 @@ function dismissBadgeHandler(event) {
   isBadgeVisible.value = false
   console.log(event)
 }
+
+const currentPage = ref(1)
+
+function pageChangeHandler(page) {
+  console.log('page change handler', page)
+}
+const blushTableColumns = [
+   {
+    key: 'name',
+    title: 'Nome'
+   },
+   {
+    key: 'age',
+    title: 'Idade',
+   },
+   {
+    key: 'color',
+    title: 'Cor'
+   },
+   {
+    key: 'number',
+    title: 'Número'
+   }
+]
+
+const blushTableItems = [
+  {
+    name: 'Nome 1',
+    age: '20',
+    color: 'Amarelo',
+    number: '123',
+  },
+  {
+    name: 'Nome 2',
+    age: '30',
+    color: 'Azul',
+    number: '123'
+  },
+  {
+    name: 'Nome 2',
+    age: '40',
+    color: 'Vermelho',
+    number: '123'
+  }
+]
+
+function tableItemsChanged(selectedItems) {
+  console.log(selectedItems)
+}
+
+const listItems = [
+  {
+    key: 'item1',
+    text: 'Item 1'
+  },
+  {
+    key: 'item2',
+    text: 'Item 2'
+  },
+  {
+    key: 'item3',
+    text: 'Item 3'
+  },
+  {
+    key: 'item4',
+    text: 'Item 4'
+  }
+]
+const checkboxVModel = ref()
+
+function changeCheckboxHandler(event) {
+  console.log('changeCheckboxHandler', event)
+}
+
+function inputCheckboxHandler(event) {
+  console.log('inputCheckboxHandler', event)
+}
+
+const radioVModel = ref()
+
+function changeRadioHandler(event) {
+  console.log('changeRadioHandler', event)
+}
+
+function inputRadioHandler(event) {
+  console.log('inputRadioHandler', event)
+}
+
+const inputTextVModel = ref('')
+
+function changeInputTextHandler(event) {
+  console.log('changeInputTextHandler', event)
+}
+
+function inputInputTextHandler(event) {
+  console.log('inputInputTextHandler', event)
+}
+
+function focusInputTextHandler(event) {
+  console.log('focusInputTextHandler', event)
+}
+
+function blurInputTextHandler(event) {
+  console.log('blurInputTextHandler', event)
+}
+
+const modalIsOpen = ref(false)
+
+function openModalHandler() {
+  modalIsOpen.value = true
+}
+
+function closeModalHandler() {
+  modalIsOpen.value = false
+}
+
+const breadcrumbItems = [
+  {
+    text: 'Google',
+    href: 'https://google.com',
+    active: true
+  },
+  {
+    text: 'Card 1',
+    toRoute: '/card1'
+  }
+]
 
 const itemsCollapse = [
   {
@@ -290,6 +581,7 @@ const itemsCollapse = [
     content: 'content2 collapse'
   },
 ]
+
 </script>
 
 <style lang="scss">
