@@ -5,7 +5,7 @@ export default {
   component: BlushPagination,
   tags: ['autodocs'],
   parameters: {
-    componentSubtitle: 'Componente de páginação com  opções de estilos.',
+    componentSubtitle: 'Componente de paginação com  opções de estilos.',
   },
   argTypes: {
     vModel: {

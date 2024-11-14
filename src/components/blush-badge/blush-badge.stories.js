@@ -6,7 +6,7 @@ export default {
   component: BlushBadge,
   tags: ['autodocs'],
   parameters: {
-    componentSubtitle: 'Componente de botão com uma lista de opções de cores, estilos e tamanhos.',
+    componentSubtitle: 'Componente de badge com uma lista de opções de cores, estilos e tamanhos.',
   },
   argTypes: {
     text: {
@@ -48,15 +48,15 @@ export default {
             }
         }
     },
+    onDismiss: {
+      description: 'Evento emitido ao clicar no ícone de dismiss',
+      table: {
+          type: {
+              summary: 'function'
+          },
+      }
+    },
   },
-  onDismiss: {
-    description: 'Define se o badge mostrará o ícone/botão de dismiss',
-    table: {
-        type: {
-            summary: 'boolean'
-        },
-    }
-  }, 
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: {
     onDismiss: fn()

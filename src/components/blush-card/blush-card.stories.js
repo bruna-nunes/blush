@@ -87,7 +87,7 @@ export default {
       control: {
           type: 'text'
       },
-      description: 'Slot de Header do card. Aceite qualquer conteúdo desejado',
+      description: 'Slot de Header do card. Aceita qualquer conteúdo desejado',
       table: {
           type: {
               summary: 'html'
@@ -98,7 +98,7 @@ export default {
       control: {
           type: 'text'
       },
-      description: 'Slot de Content do card. Aceite qualquer conteúdo desejado',
+      description: 'Slot de Content do card. Aceita qualquer conteúdo desejado',
       table: {
           type: {
               summary: 'html'
@@ -109,7 +109,7 @@ export default {
       control: {
           type: 'text'
       },
-      description: 'Slot de Footer do card. Aceite qualquer conteúdo desejado',
+      description: 'Slot de Footer do card. Aceita qualquer conteúdo desejado',
       table: {
           type: {
               summary: 'html'
@@ -133,19 +133,17 @@ export const NeutralOutline = {
   render: (args, {argTypes}) => ({
     components: { BlushCard, BlushButton },
     props: Object.keys(argTypes),
-    setup() {
-      return {
-        ...args
-      }
-    },
+    setup: () => ({
+      args
+    }),
     template: `
       <blush-card
-        title="${args.title}"
-        subtitle="${args.subtitle}"
-        variant="${args.variant}"
-        imageSrc="${args.imageSrc}"
-        imageAlt="${args.imageAlt}"
-        imagePlacement="${args.imagePlacement}"
+        :title="args.title"
+        :subtitle="args.subtitle"
+        :variant="args.variant"
+        :imageSrc="args.imageSrc"
+        :imageAlt="args.imageAlt"
+        :imagePlacement="args.imagePlacement"
         style="max-width: 20rem;"
       >
         <template #header>
