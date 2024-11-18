@@ -38,9 +38,11 @@ import { computed } from 'vue';
 const props = defineProps({
     name: {
         type: String,
+        required: true,
     },
     title: {
         type: String,
+        required: true,
     },
     variant: {
         type: String,
