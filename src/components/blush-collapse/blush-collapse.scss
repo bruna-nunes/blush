@@ -1,0 +1,203 @@
+.blush-collapse {
+    box-sizing: border-box;
+    border-radius: map-get($border-radius, 'small');
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms linear;
+    position: relative;
+
+    .radio-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        opacity: 0;
+        z-index: 1;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .header-collapse {
+        padding: spacing(2) spacing(3) spacing(2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        
+        .title {
+            margin: 0;
+
+            @include typography-body-2-highlight;
+        }
+
+        .icon-collapse {
+            margin-left: spacing(2);
+            transform: rotate(90deg);
+            transition: all 300ms linear;
+        }
+    }
+
+   .main-collapse {
+        display: none;
+        padding: spacing(2) spacing(3) spacing(2);
+        transition: all 300ms linear;
+
+        @include typography-body-3;
+   }
+
+    .radio-collapse:checked ~ .header-collapse .icon-collapse {
+        transform: rotate(-90deg);
+    }
+    
+    .radio-collapse:checked ~ .main-collapse {
+        display: block;
+    }
+
+    // ***Colors
+    &.primary {
+        background-color: map-get($primary-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($primary-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'neutral-013')
+            }
+        }
+    }
+
+    &.primary-outline {
+        background-color: map-get($primary-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'primary-001')
+            }
+        }
+    }
+
+    &.accent {
+        background-color: map-get($accent-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($accent-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'neutral-013')
+            }
+        }
+    }
+
+    &.accent-outline {
+        background-color: map-get($accent-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'accent-001')
+            }
+        }
+    }
+
+    &.success {
+        background-color: map-get($success-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($success-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'neutral-013')
+            }
+        }
+    }
+
+    &.success-outline {
+        background-color: map-get($success-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'success-001')
+            }
+        }
+    }
+
+    &.warning {
+        background-color: map-get($warning-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($warning-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'neutral-013')
+            }
+        }
+    }
+
+    &.warning-outline {
+        background-color: map-get($warning-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'warning-001')
+            }
+        }
+    }
+
+    &.danger {
+        background-color: map-get($error-absolute, '001');
+        border: map-get($border-width, 'nano') solid map-get($error-absolute, '011');
+        color: map-get($neutral, '013');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'neutral-013')
+            }
+        }
+    }
+
+    &.danger-outline {
+        background-color: map-get($error-absolute, '007');
+        border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+        color: map-get($neutral, '003');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'danger-001')
+            }
+        }
+    }
+
+    &.neutral {
+        background-color: map-get($neutral, '004');
+        border: map-get($border-width, 'nano') solid map-get($neutral, '007');
+        color: map-get($neutral, '013');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'neutral-013')
+            }
+        }
+    }
+
+    &.neutral-outline {
+        background-color: map-get($neutral, '013');
+        border: map-get($border-width, 'nano') solid map-get($neutral, '011');
+        color: map-get($neutral, '003');
+
+        .header-collapse {
+            .icon-collapse {
+                filter: map-get($filter, 'neutral-008')
+            }
+        }
+    }
+}

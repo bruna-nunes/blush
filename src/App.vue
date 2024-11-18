@@ -399,12 +399,26 @@
   <blush-tooltip title="title" content="conteudo tooltip" placement="bottom">
     <h1>Tooltip</h1>
   </blush-tooltip>
+  <blush-collapse
+    title="Title collapse 1"
+    name="collapse-accordion"
+    variant="neutral-outline"
+    @onChangeCollapseVisibility="onChangeCollapseVisibility"
+  >
+      conteudo collapse
+  </blush-collapse>
+  <blush-collapse
+    title="Title collapse 2"
+    name="collapse-accordion"
+    :opened="true"
+  >
+      conteudo collapse
+  </blush-collapse>
 
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import CompExample from './components/CompExample.vue'
 import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
@@ -419,6 +433,7 @@ import blushModal from './components/blush-modal/blush-modal.vue';
 import blushAlert from './components/blush-alert/blush-alert.vue';
 import blushBreadcrumb from './components/blush-breadcrumb/blush-breadcrumb.vue';
 import blushTooltip from './components/blush-tooltip/blush-tooltip.vue';
+import blushCollapse from './components/blush-collapse/blush-collapse.vue';
 
 const isBadgeVisible = ref(true)
 
@@ -557,6 +572,10 @@ const breadcrumbItems = [
     toRoute: '/card1'
   }
 ]
+
+function onChangeCollapseVisibility(collapseName) {
+  console.log(collapseName)
+}
 
 </script>
 
