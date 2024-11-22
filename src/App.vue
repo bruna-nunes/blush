@@ -414,11 +414,38 @@
   >
       conteudo collapse
   </blush-collapse>
+  <hr>
+  <blush-toast 
+    title="Toast"
+    text="Conteúdo do toast"
+    :show-dismiss="true"
+  />
+  <blush-button
+    id="button1"
+    name="nameButton1"
+    type="button"
+    label="Mostrar toast com plugin"
+    variant="primary"
+    size="large"
+    @onClick="$toasts.add({ title: 'Toast disparado', text: 'Conteúdo', type: 'informative', showDismiss: true})"
+  />
+  <div
+    v-show="$toasts.queue.length > 0"
+    class="toasts-container"
+  >
+      <blush-toast
+        v-for="toast in $toasts.queue"
+        :title="toast.title"
+        :text="toast.text"
+        :show-dismiss="toast.showDismiss"
+        @on-dismiss="$toasts.remove(toast.id)"
+      />
+    </div>
 
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { inject, ref } from 'vue'
 import blushButton from './components/blush-button/blush-button.vue';
 import blushBadge from './components/blush-badge/blush-badge.vue';
 import blushProgress from './components/blush-progress/blush-progress.vue';
@@ -434,7 +461,9 @@ import blushAlert from './components/blush-alert/blush-alert.vue';
 import blushBreadcrumb from './components/blush-breadcrumb/blush-breadcrumb.vue';
 import blushTooltip from './components/blush-tooltip/blush-tooltip.vue';
 import blushCollapse from './components/blush-collapse/blush-collapse.vue';
+import blushToast from './components/blush-toast/blush-toast.vue'
 
+const $toasts = inject('toasts')
 const isBadgeVisible = ref(true)
 
 function clickButtonHandler(event) {
@@ -592,4 +621,18 @@ function onChangeCollapseVisibility(collapseName) {
     align-items: end;
   }
 }
+
+.toasts-container {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 300px;
+    z-index: map-get($z-index, 'high');
+    display: flex;
+    flex-direction: column;
+    gap: spacing(2);
+    justify-content: center;
+    padding: spacing(2);
+  }
 </style>

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createMemoryHistory, createRouter } from 'vue-router'
+import toastsPlugin from './plugins/toasts'
 
 import BlushCard from './components/blush-card/blush-card.vue'
 
@@ -36,4 +37,5 @@ const router = createRouter({
 
 const app = createApp(App)
 app.use(router)
+app.use(toastsPlugin)
 app.mount('#app')
