@@ -1,0 +1,264 @@
+.blush-select {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1);
+
+    .select-label {
+        display: flex;
+        flex-direction: column;
+        gap: spacing(1);
+        transition: all 400ms linear;
+        width: 100%;
+
+        .select-content {
+            display: flex;
+            align-items: center;
+            gap: spacing(1);
+            width: 100%;
+
+            .custom-select-display {
+                cursor: pointer;
+                width: 100%;
+                border-radius: map-get($border-radius, 'small');
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                }
+                .arrow {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    .custom-select-options {
+        list-style: none;
+        padding: spacing(2);
+        margin: spacing(1) 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: spacing(2);
+        max-height: 160px;
+        overflow: auto;
+        z-index: map-get($z-index, 'medium');
+
+        border-radius: map-get($border-radius, 'small');
+        box-shadow: map-get($shadows, '001');
+
+
+        .custom-option {
+            cursor: pointer;
+            border-radius: map-get($border-radius, 'small');
+
+        }
+    }
+
+    .hint {
+        color: map-get($neutral, '007');
+
+        @include typography-label-3;
+    }
+
+    .error {
+        display: flex;
+        align-items: center;
+        gap: spacing(1);
+
+        .icon {
+            filter: map-get($filter, 'danger-001');
+        }
+
+        .text {
+            color: map-get($error-absolute, '001');
+
+            @include typography-label-3;
+        }
+    }
+
+    .native-select {
+        display: none;
+    }
+
+    &.neutral {
+        .select-label {
+            .label {
+                color: map-get($neutral, '004');
+            }
+
+            .select-content {
+                .custom-select-display {
+                    background-color: map-get($neutral, '014');
+                    border: map-get($border-width, 'nano') solid map-get($neutral, '011');
+                    color: map-get($neutral, '005');
+
+                    .arrow {
+                        filter: map-get($filter, 'neutral-005')
+                    }
+                }
+            }
+        }
+
+        .custom-select-options {
+            background-color: map-get($neutral, '014');
+
+            .custom-option {
+                background-color: map-get($neutral, '013');
+                color: map-get($neutral, '005');
+
+                &.selected {
+                    background-color: map-get($neutral, '010');
+                }
+
+                &:hover {
+                    background-color: map-get($neutral, '011');
+                }
+            }
+        }
+    }
+
+    &.invalid {
+        .select-label {
+            .select-content {
+                .custom-select-display {
+                    background-color: map-get($error-absolute, '007');
+                    border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+    
+                    .arrow {
+                        filter: map-get($filter, 'danger-001')
+                    }
+                }
+
+                .state-icon {
+                    filter: map-get($filter, 'danger-001');
+                }  
+            }
+        }
+    }
+
+    &.valid {
+        .select-label {
+            .select-content {
+                .custom-select-display {
+                    background-color: map-get($success-absolute, '007');
+                    border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+    
+                    .arrow {
+                        filter: map-get($filter, 'success-001')
+                    }
+                }
+
+                .state-icon {
+                    filter: map-get($filter, 'success-001');
+                }
+            }
+            
+        }
+    }
+
+    &.readonly, &.disabled {
+        .select-label {
+            cursor: not-allowed;
+
+            .label {
+                color: map-get($neutral, '008');
+                cursor: not-allowed;
+            }
+
+            .select-content {
+                .custom-select-display {
+                    background-color: map-get($neutral, '013');
+                    border: map-get($border-width, 'nano') solid map-get($neutral, '010');
+                    cursor: not-allowed;
+                    color: map-get($neutral, '007');
+
+                    .arrow {
+                        filter: map-get($filter, 'neutral-010')
+                    }
+                }
+            }
+        }
+
+    }
+
+    // ***Sizes
+    &.small {
+        .select-label {
+            .label {
+                @include typography-label-3;
+            }
+
+            .select-content {
+                .custom-select-display {
+                    height: 28px;
+                    padding: spacing(2);
+    
+                    @include typography-label-3;
+                }
+            }
+        }
+
+        .custom-select-options {
+            padding: spacing(2);
+
+            .custom-option {
+                @include typography-label-3;
+            }
+        }
+    }
+
+    &.medium {
+        .select-label {
+            .label {
+                @include typography-label-2;
+            }
+
+            .select-content {
+                .custom-select-display {
+                    height: 32px;
+                    padding: spacing(2) spacing(3);
+    
+                    @include typography-label-2;
+                }
+            }
+        }
+
+        .custom-select-options {
+            .custom-option {
+                padding: spacing(2) spacing(3);
+
+                @include typography-label-2;
+            }
+        }
+    }
+
+    &.large {
+        .select-label {
+            .label {
+                @include typography-label-1;
+            }
+
+            .select-content {
+                .custom-select-display {
+                    height: 36px;
+                    padding: spacing(3) spacing(2);
+    
+                    @include typography-label-1;
+                }
+            }
+        }
+
+        .custom-select-options {
+            .custom-option {
+                padding: spacing(2) spacing(2);
+
+                @include typography-label-1;
+            }
+        }
+    }
+}
