@@ -433,14 +433,33 @@
     v-show="$toasts.queue.length > 0"
     class="toasts-container"
   >
-      <blush-toast
-        v-for="toast in $toasts.queue"
-        :title="toast.title"
-        :text="toast.text"
-        :show-dismiss="toast.showDismiss"
-        @on-dismiss="$toasts.remove(toast.id)"
-      />
-    </div>
+    <blush-toast
+      v-for="toast in $toasts.queue"
+      :title="toast.title"
+      :text="toast.text"
+      :show-dismiss="toast.showDismiss"
+      @on-dismiss="$toasts.remove(toast.id)"
+    />
+  </div>
+  <hr>
+  <blush-select
+    v-model="selectedValues"
+    label="Label select"
+    state="normal"
+    :readonly="false"
+    error-text="error"
+    hint-text="hint"
+    @on-change="handleSelectChange"
+  >
+    <option value="1">Opção 1</option>
+    <option value="2">Opção 2</option>
+    <option value="3">Opção 3</option>
+    <option value="4">Opção 4</option>
+    <option value="5">Opção 5</option>
+    <option value="6">Opção 6</option>
+  </blush-select>
+  <br>
+  Selecionado(s): {{ selectedValues }}
 
 </template>
 
@@ -462,6 +481,7 @@ import blushBreadcrumb from './components/blush-breadcrumb/blush-breadcrumb.vue'
 import blushTooltip from './components/blush-tooltip/blush-tooltip.vue';
 import blushCollapse from './components/blush-collapse/blush-collapse.vue';
 import blushToast from './components/blush-toast/blush-toast.vue'
+import blushSelect from './components/blush-select/blush-select.vue';
 
 const $toasts = inject('toasts')
 const isBadgeVisible = ref(true)
@@ -606,6 +626,10 @@ function onChangeCollapseVisibility(collapseName) {
   console.log(collapseName)
 }
 
+const selectedValues = ref([])
+function handleSelectChange(selectedValue) {
+  console.log(selectedValue)
+}
 </script>
 
 <style lang="scss">
