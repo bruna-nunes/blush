@@ -1,92 +1,95 @@
 <template>
-    <div 
-        v-if="props.isOpen"
-        class="blush-modal-overlay"
-        @click="handleOverlayClick"
-    >
-        <div
-            :class="classes"
-            @click.stop
-        >
-            <img
-                v-if="props.showDismissButton"
-                src="../../assets/icons/x.svg"
-                width="24"
-                height="24"
-                class="dismiss-icon"
-                alt="Fechar modal"
-                @click="emit('onClose')"
-            >
-            <header
-                v-if="$slots.header"
-                class="header"
-                :class="{'with-dismiss': props.showDismissButton}"
-            >
-                <slot name="header"></slot>
-            </header>
-            <main
-                v-if="$slots.content"
-                class="content"
-                :class="{'with-dismiss': props.showDismissButton}"
-            >
-                <slot name="content"></slot>
-            </main>
-            <footer v-if="$slots.footer" class="footer">
-                <slot name="footer"></slot>
-            </footer>
-        </div>
-    </div>
+	<div 
+		v-if="props.isOpen"
+		class="blush-modal-overlay"
+		@click="handleOverlayClick"
+	>
+		<div
+			:class="classes"
+			@click.stop
+		>
+			<img
+				v-if="props.showDismissButton"
+				src="../../assets/icons/x.svg"
+				width="24"
+				height="24"
+				class="dismiss-icon"
+				alt="Fechar modal"
+				@click="emit('onClose')"
+			>
+			<header
+				v-if="$slots.header"
+				class="header"
+				:class="{'with-dismiss': props.showDismissButton}"
+			>
+				<slot name="header" />
+			</header>
+			<main
+				v-if="$slots.content"
+				class="content"
+				:class="{'with-dismiss': props.showDismissButton}"
+			>
+				<slot name="content" />
+			</main>
+			<footer
+				v-if="$slots.footer"
+				class="footer"
+			>
+				<slot name="footer" />
+			</footer>
+		</div>
+	</div>
 </template>
   
 <script setup>
-import { computed, watch } from 'vue';
+import { computed, watch } from 'vue'
 
 const props = defineProps({
-    isOpen: {
-        type: Boolean,
-        default: false,
-    },
-    showDismissButton: {
-        type: Boolean,
-        default: false,
-    },
-    closeOutside: {
-        type: Boolean,
-        default: false,
-    },
-    variant: {
-        type: String,
-        default: 'neutral-outline',
-        validator(value) {
-            return [
-                'primary', 'primary-outline',
-                'accent', 'accent-outline',
-                'success', 'success-outline',
-                'warning', 'warning-outline',
-                'danger', 'danger-outline',
-                'neutral', 'neutral-outline'
-            ].includes(value)
-        }
-    },
+	isOpen: {
+		type: Boolean,
+		default: false,
+	},
+	showDismissButton: {
+		type: Boolean,
+		default: false,
+	},
+	closeOutside: {
+		type: Boolean,
+		default: false,
+	},
+	variant: {
+		type: String,
+		default: 'neutral-outline',
+		validator(value) {
+			return [
+				'primary', 'primary-outline',
+				'accent', 'accent-outline',
+				'success', 'success-outline',
+				'warning', 'warning-outline',
+				'danger', 'danger-outline',
+				'neutral', 'neutral-outline'
+			].includes(value)
+		}
+	},
 })
 
 const emit = defineEmits(['onOpen', 'onClose'])
 
 const classes = computed(() => [
-    'blush-modal',
-    props.variant,
+	'blush-modal',
+	props.variant,
 ])
 
 function handleOverlayClick() {
-    if(props.closeOutside) {
-        emit('onClose')
-    }
+	if(props.closeOutside) {
+		emit('onClose')
+	}
 }
 
 watch(() => props.isOpen, (newVal) => {
-    if (newVal) {
-        emit('onOpen');
-    }
+	if (newVal) {
+		emit('onOpen')
+	}
 })
 
 </script>

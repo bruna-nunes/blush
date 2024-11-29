@@ -1,6 +1,6 @@
 .blush-badge {
     box-sizing: border-box;
-    border-radius: map-get($border-radius, 'giant');
+    border-radius: map.get($border-radius, 'giant');
     display: flex;
     align-items: center;
     height: 24px;
@@ -11,7 +11,6 @@
     @include typography-label-3;
 
     &.dismissible {
-
         .dismiss-icon {
             margin-left: spacing(2);
             cursor: pointer;
@@ -20,116 +19,116 @@
    
     // ***Colors
     &.primary {
-        background-color: map-get($primary-absolute, '001');
-        color: map-get($neutral, '013');
+        background-color: map.get($primary-absolute, '001');
+        color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map-get($filter, 'white');
+            filter: map.get($filter, 'white');
         }
     }
 
     &.primary-outline {
-        background-color: map-get($primary-absolute, '007');
-        border: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
-        color: map-get($primary-absolute, '001');
+        background-color: map.get($primary-absolute, '007');
+        border: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
+        color: map.get($primary-absolute, '001');
 
         .dismiss-icon {
-            filter: map-get($filter, 'primary-001');
+            filter: map.get($filter, 'primary-001');
         }
     }
 
     &.accent {
-        background-color: map-get($accent-absolute, '001');
-        color: map-get($neutral, '013');
+        background-color: map.get($accent-absolute, '001');
+        color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map-get($filter, 'white');
+            filter: map.get($filter, 'white');
         }
     }
 
     &.accent-outline {
-        background-color: map-get($accent-absolute, '007');
-        border: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
-        color: map-get($accent-absolute, '001');
+        background-color: map.get($accent-absolute, '007');
+        border: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
+        color: map.get($accent-absolute, '001');
 
         .dismiss-icon {
-            filter: map-get($filter, 'accent-001');
+            filter: map.get($filter, 'accent-001');
         }
     }
 
     &.success {
-        background-color: map-get($success-absolute, '001');
-        color: map-get($neutral, '013');
+        background-color: map.get($success-absolute, '001');
+        color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map-get($filter, 'white');
+            filter: map.get($filter, 'white');
         }
     }
 
     &.success-outline {
-        background-color: map-get($success-absolute, '007');
-        border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
-        color: map-get($success-absolute, '001');
+        background-color: map.get($success-absolute, '007');
+        border: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
+        color: map.get($success-absolute, '001');
 
         .dismiss-icon {
-            filter: map-get($filter, 'success-001');
+            filter: map.get($filter, 'success-001');
         }
     }
 
     &.warning {
-        background-color: map-get($warning-absolute, '001');
-        color: map-get($neutral, '013');
+        background-color: map.get($warning-absolute, '001');
+        color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map-get($filter, 'white');
+            filter: map.get($filter, 'white');
         }
     }
 
     &.warning-outline {
-        background-color: map-get($warning-absolute, '007');
-        border: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
-        color: map-get($warning-absolute, '001');
+        background-color: map.get($warning-absolute, '007');
+        border: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
+        color: map.get($warning-absolute, '001');
 
         .dismiss-icon {
-            filter: map-get($filter, 'warning-001');
+            filter: map.get($filter, 'warning-001');
         }
     }
 
     &.danger {
-        background-color: map-get($error-absolute, '001');
-        color: map-get($neutral, '013');
+        background-color: map.get($error-absolute, '001');
+        color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map-get($filter, 'white');
+            filter: map.get($filter, 'white');
         }
     }
 
     &.danger-outline {
-        background-color: map-get($error-absolute, '007');
-        border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
-        color: map-get($error-absolute, '001');
+        background-color: map.get($error-absolute, '007');
+        border: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
+        color: map.get($error-absolute, '001');
 
         .dismiss-icon {
-            filter: map-get($filter, 'danger-001');
+            filter: map.get($filter, 'danger-001');
         }
     }
 
     &.neutral {
-        background-color: map-get($neutral, '004');
-        color: map-get($neutral, '013');
+        background-color: map.get($neutral, '004');
+        color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map-get($filter, 'white');
+            filter: map.get($filter, 'white');
         }
     }
 
     &.neutral-outline {
-        background-color: map-get($neutral, '012');
-        border: map-get($border-width, 'nano') solid map-get($neutral, '004');
-        color: map-get($neutral, '004');
+        background-color: map.get($neutral, '012');
+        border: map.get($border-width, 'nano') solid map.get($neutral, '004');
+        color: map.get($neutral, '004');
 
         .dismiss-icon {
-            filter: map-get($filter, 'neutral-004');
+            filter: map.get($filter, 'neutral-004');
         }
     }
 }

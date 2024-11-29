@@ -7,12 +7,9 @@ $size-dismiss-icon: 24px;
     width: 100%;
 	height: 100%;
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	inset: 0;
 	z-index: 999;
-	background-color: map-get($transparency, '003');
+	background-color: map.get($transparency, '003');
 	transition: all 400ms linear;
 
 	.blush-modal {
@@ -22,7 +19,7 @@ $size-dismiss-icon: 24px;
 		max-width: 80%;
 		max-height: 400px;
 		position: relative;
-		border-radius: map-get($border-radius, 'small');
+		border-radius: map.get($border-radius, 'small');
 		transition: all 400ms linear;
 
 		@media (max-width: 1200px) {
@@ -80,218 +77,218 @@ $size-dismiss-icon: 24px;
 
 		// ***Colors
 		&.primary {
-			background-color: map-get($primary-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($primary-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
+			color: map.get($neutral, '013');
 			
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-013')
+				filter: map.get($filter, 'neutral-013')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
 			}
 
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+				border-top: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
 			}
 		}
 
 		&.primary-outline {
-			background-color: map-get($primary-absolute, '007');
-			border: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
-			color: map-get($neutral, '003');
+			background-color: map.get($primary-absolute, '007');
+			border: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
+			color: map.get($neutral, '003');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-008')
+				filter: map.get($filter, 'neutral-008')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
 			}
 		}
 
 		&.accent {
-			background-color: map-get($accent-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($accent-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
+			color: map.get($neutral, '013');
 
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-013')
+				filter: map.get($filter, 'neutral-013')
 			}
 	
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+				border-top: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
 			}
 		}
 
 		&.accent-outline {
-			background-color: map-get($accent-absolute, '007');
-			border: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
-			color: map-get($neutral, '003');
+			background-color: map.get($accent-absolute, '007');
+			border: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
+			color: map.get($neutral, '003');
 
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-008')
+				filter: map.get($filter, 'neutral-008')
 			}
 	
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
 			}
 		}
 
 		&.success {
-			background-color: map-get($success-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($success-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
+			color: map.get($neutral, '013');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-013')
+				filter: map.get($filter, 'neutral-013')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+				border-top: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
 			}
 		}
 
 		&.success-outline {
-			background-color: map-get($success-absolute, '007');
-			border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
-			color: map-get($neutral, '003');
+			background-color: map.get($success-absolute, '007');
+			border: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
+			color: map.get($neutral, '003');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-008')
+				filter: map.get($filter, 'neutral-008')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
 			}
 
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
 			}
 		}
 
 		&.warning {
-			background-color: map-get($warning-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($warning-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
+			color: map.get($neutral, '013');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-013')
+				filter: map.get($filter, 'neutral-013')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+				border-top: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
 			}
 		}
 
 		&.warning-outline {
-			background-color: map-get($warning-absolute, '007');
-			border: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
-			color: map-get($neutral, '003');
+			background-color: map.get($warning-absolute, '007');
+			border: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
+			color: map.get($neutral, '003');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-008')
+				filter: map.get($filter, 'neutral-008')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
 			}
 		}
 
 		&.danger {
-			background-color: map-get($error-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($error-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
+			color: map.get($neutral, '013');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-013')
+				filter: map.get($filter, 'neutral-013')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+				border-top: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
 			}
 		}
 
 		&.danger-outline {
-			background-color: map-get($error-absolute, '007');
-			border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
-			color: map-get($neutral, '003');
+			background-color: map.get($error-absolute, '007');
+			border: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
+			color: map.get($neutral, '003');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-008')
+				filter: map.get($filter, 'neutral-008')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
 			}
 		}
 
 		&.neutral {
-			background-color: map-get($neutral, '004');
-			border: map-get($border-width, 'nano') solid map-get($neutral, '007');
-			color: map-get($neutral, '013');
+			background-color: map.get($neutral, '004');
+			border: map.get($border-width, 'nano') solid map.get($neutral, '007');
+			color: map.get($neutral, '013');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-013')
+				filter: map.get($filter, 'neutral-013')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '007');
+				border-bottom: map.get($border-width, 'nano') solid map.get($neutral, '007');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($neutral, '007');
+				border-top: map.get($border-width, 'nano') solid map.get($neutral, '007');
 			}
 		}
 
 		&.neutral-outline {
-			background-color: map-get($neutral, '013');
-			border: map-get($border-width, 'nano') solid map-get($neutral, '011');
-			color: map-get($neutral, '005');
+			background-color: map.get($neutral, '013');
+			border: map.get($border-width, 'nano') solid map.get($neutral, '011');
+			color: map.get($neutral, '005');
 	
 			> .dismiss-icon {
-				filter: map-get($filter, 'neutral-008')
+				filter: map.get($filter, 'neutral-008')
 			}
 
 			.header {
-				border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '011');
+				border-bottom: map.get($border-width, 'nano') solid map.get($neutral, '011');
 			}
 	
 			.footer {
-				border-top: map-get($border-width, 'nano') solid map-get($neutral, '011');
+				border-top: map.get($border-width, 'nano') solid map.get($neutral, '011');
 			}
 		}
 	}

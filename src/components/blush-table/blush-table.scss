@@ -4,34 +4,31 @@
     white-space: nowrap;
 
     table {
-		border-spacing: 0px;
+		border-spacing: 0;
 
         tr {
             height: 44px;
 
             &:last-of-type {
                 td:first-of-type {
-                    border-bottom-left-radius: map-get($border-radius, 'small');
+                    border-bottom-left-radius: map.get($border-radius, 'small');
                 }
-            }
 
-            &:last-of-type {
-                td:last-of-type {
-                    border-bottom-right-radius: map-get($border-radius, 'small');
+				td:last-of-type {
+                    border-bottom-right-radius: map.get($border-radius, 'small');
                 }
             }
-            
 
             th {
 				text-align: start;
 				padding: spacing(2) spacing(3);
 
 				&:first-of-type {
-					border-top-left-radius: map-get($border-radius, 'small');
+					border-top-left-radius: map.get($border-radius, 'small');
 				}
 
 				&:last-of-type {
-					border-top-right-radius: map-get($border-radius, 'small');
+					border-top-right-radius: map.get($border-radius, 'small');
 				}
 				
                 @include typography-label-2;
@@ -49,31 +46,31 @@
     &.primary {
         table {
 			th {
-				background-color: map-get($primary-absolute, '001');
-				border-top: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
-				border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($primary-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
 				}
 			}
 
 			td {
-				background-color: map-get($primary-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($primary-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
 				}
 			}
 		}
@@ -82,8 +79,8 @@
             table {
                 tr:nth-child(odd) {
                     td {
-                        background-color: map-get($primary-absolute, '007');
-                        color: map-get($neutral, '003');
+                        background-color: map.get($primary-absolute, '007');
+                        color: map.get($neutral, '003');
                     }
                 }
             }
@@ -93,31 +90,31 @@
     &.primary-outline {
         table {
 			th {
-				background-color: map-get($primary-absolute, '007');
-				border-top: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($primary-absolute, '007');
+				border-top: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
 				}
 			}
 
 			td {
-				background-color: map-get($neutral, '014');
-				border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($neutral, '014');
+				border-bottom: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($primary-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($primary-absolute, '001');
 				}
 			}
 		}
@@ -126,7 +123,7 @@
             table {
                 tr:nth-child(even) {
                     td {
-                        background-color: map-get($primary-absolute, '007');
+                        background-color: map.get($primary-absolute, '007');
                     }
                 }
             }
@@ -136,31 +133,31 @@
     &.accent {
         table {
 			th {
-				background-color: map-get($accent-absolute, '001');
-				border-top: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
-				border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($accent-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
 				}
 			}
 
 			td {
-				background-color: map-get($accent-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($accent-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
 				}
 			}
 		}
@@ -169,8 +166,8 @@
             table {
                 tr:nth-child(odd) {
                     td {
-                        background-color: map-get($accent-absolute, '007');
-                        color: map-get($neutral, '003');
+                        background-color: map.get($accent-absolute, '007');
+                        color: map.get($neutral, '003');
                     }
                 }
             }
@@ -180,31 +177,31 @@
     &.accent-outline {
         table {
 			th {
-				background-color: map-get($accent-absolute, '007');
-				border-top: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($accent-absolute, '007');
+				border-top: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
 				}
 			}
 
 			td {
-				background-color: map-get($neutral, '014');
-				border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($neutral, '014');
+				border-bottom: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($accent-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($accent-absolute, '001');
 				}
 			}
 		}
@@ -213,7 +210,7 @@
             table {
                 tr:nth-child(even) {
                     td {
-                        background-color: map-get($accent-absolute, '007');
+                        background-color: map.get($accent-absolute, '007');
                     }
                 }
             }
@@ -223,31 +220,31 @@
     &.success {
         table {
 			th {
-				background-color: map-get($success-absolute, '001');
-				border-top: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
-				border-bottom: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($success-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
 				}
 			}
 
 			td {
-				background-color: map-get($success-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($success-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
 				}
 			}
 		}
@@ -256,8 +253,8 @@
             table {
                 tr:nth-child(odd) {
                     td {
-                        background-color: map-get($success-absolute, '007');
-                        color: map-get($neutral, '003');
+                        background-color: map.get($success-absolute, '007');
+                        color: map.get($neutral, '003');
                     }
                 }
             }
@@ -267,31 +264,31 @@
     &.success-outline {
         table {
 			th {
-				background-color: map-get($success-absolute, '007');
-				border-top: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($success-absolute, '007');
+				border-top: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
 				}
 			}
 
 			td {
-				background-color: map-get($neutral, '014');
-				border-bottom: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($neutral, '014');
+				border-bottom: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
 				}
 			}
 		}
@@ -300,7 +297,7 @@
             table {
                 tr:nth-child(even) {
                     td {
-                        background-color: map-get($success-absolute, '007');
+                        background-color: map.get($success-absolute, '007');
                     }
                 }
             }
@@ -310,31 +307,31 @@
     &.warning {
         table {
 			th {
-				background-color: map-get($warning-absolute, '001');
-				border-top: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
-				border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($warning-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
 				}
 			}
 
 			td {
-				background-color: map-get($warning-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($warning-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
 				}
 			}
 		}
@@ -343,8 +340,8 @@
             table {
                 tr:nth-child(odd) {
                     td {
-                        background-color: map-get($warning-absolute, '007');
-                        color: map-get($neutral, '003');
+                        background-color: map.get($warning-absolute, '007');
+                        color: map.get($neutral, '003');
                     }
                 }
             }
@@ -354,31 +351,31 @@
     &.warning-outline {
         table {
 			th {
-				background-color: map-get($warning-absolute, '007');
-				border-top: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($warning-absolute, '007');
+				border-top: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
 				}
 			}
 
 			td {
-				background-color: map-get($neutral, '014');
-				border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($neutral, '014');
+				border-bottom: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($warning-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($warning-absolute, '001');
 				}
 			}
 		}
@@ -387,7 +384,7 @@
             table {
                 tr:nth-child(even) {
                     td {
-                        background-color: map-get($warning-absolute, '007');
+                        background-color: map.get($warning-absolute, '007');
                     }
                 }
             }
@@ -397,31 +394,31 @@
     &.danger {
         table {
 			th {
-				background-color: map-get($error-absolute, '001');
-				border-top: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
-				border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($error-absolute, '001');
+				border-top: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
 				}
 			}
 
 			td {
-				background-color: map-get($error-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
-				color: map-get($neutral, '013');
+				background-color: map.get($error-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+					border-left: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+					border-right: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
 				}
 			}
 		}
@@ -430,8 +427,8 @@
             table {
                 tr:nth-child(odd) {
                     td {
-                        background-color: map-get($error-absolute, '007');
-                        color: map-get($neutral, '003');
+                        background-color: map.get($error-absolute, '007');
+                        color: map.get($neutral, '003');
                     }
                 }
             }
@@ -441,31 +438,31 @@
     &.danger-outline {
         table {
 			th {
-				background-color: map-get($error-absolute, '007');
-				border-top: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
-				border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($error-absolute, '007');
+				border-top: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
+				border-bottom: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
 				}
 			}
 
 			td {
-				background-color: map-get($neutral, '014');
-				border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
-				color: map-get($neutral, '003');
+				background-color: map.get($neutral, '014');
+				border-bottom: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+					border-left: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+					border-right: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
 				}
 			}
 		}
@@ -474,7 +471,7 @@
             table {
                 tr:nth-child(even) {
                     td {
-                        background-color: map-get($error-absolute, '007');
+                        background-color: map.get($error-absolute, '007');
                     }
                 }
             }
@@ -484,31 +481,31 @@
     &.neutral {
         table {
 			th {
-				background-color: map-get($neutral, '004');
-				border-top: map-get($border-width, 'nano') solid map-get($neutral, '007');
-				border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '007');
-				color: map-get($neutral, '013');
+				background-color: map.get($neutral, '004');
+				border-top: map.get($border-width, 'nano') solid map.get($neutral, '007');
+				border-bottom: map.get($border-width, 'nano') solid map.get($neutral, '007');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($neutral, '007');
+					border-left: map.get($border-width, 'nano') solid map.get($neutral, '007');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($neutral, '007');
+					border-right: map.get($border-width, 'nano') solid map.get($neutral, '007');
 				}
 			}
 
 			td {
-				background-color: map-get($neutral, '004');
-				border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '007');
-				color: map-get($neutral, '013');
+				background-color: map.get($neutral, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($neutral, '007');
+				color: map.get($neutral, '013');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($neutral, '007');
+					border-left: map.get($border-width, 'nano') solid map.get($neutral, '007');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($neutral, '007');
+					border-right: map.get($border-width, 'nano') solid map.get($neutral, '007');
 				}
 			}
 		}
@@ -517,8 +514,8 @@
             table {
                 tr:nth-child(odd) {
                     td {
-                        background-color: map-get($neutral, '013');
-                        color: map-get($neutral, '003');
+                        background-color: map.get($neutral, '013');
+                        color: map.get($neutral, '003');
                     }
                 }
             }
@@ -528,31 +525,31 @@
 	&.neutral-outline {
 		table {
 			th {
-				background-color: map-get($neutral, '013');
-				border-top: map-get($border-width, 'nano') solid map-get($neutral, '012');
-				border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '012');
-				color: map-get($neutral, '005');
+				background-color: map.get($neutral, '013');
+				border-top: map.get($border-width, 'nano') solid map.get($neutral, '012');
+				border-bottom: map.get($border-width, 'nano') solid map.get($neutral, '012');
+				color: map.get($neutral, '005');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($neutral, '012');
+					border-left: map.get($border-width, 'nano') solid map.get($neutral, '012');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($neutral, '012');
+					border-right: map.get($border-width, 'nano') solid map.get($neutral, '012');
 				}
 			}
 
 			td {
-				background-color: map-get($neutral, '014');
-				border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '012');
-				color: map-get($neutral, '003');
+				background-color: map.get($neutral, '014');
+				border-bottom: map.get($border-width, 'nano') solid map.get($neutral, '012');
+				color: map.get($neutral, '003');
 
 				&:first-child {
-					border-left: map-get($border-width, 'nano') solid map-get($neutral, '012');
+					border-left: map.get($border-width, 'nano') solid map.get($neutral, '012');
 				}
 
 				&:last-child {
-					border-right: map-get($border-width, 'nano') solid map-get($neutral, '012');
+					border-right: map.get($border-width, 'nano') solid map.get($neutral, '012');
 				}
 			}
 		}
@@ -561,8 +558,8 @@
             table {
                 tr:nth-child(even) {
                     td {
-                        background-color: map-get($neutral, '013');
-                        color: map-get($neutral, '003');
+                        background-color: map.get($neutral, '013');
+                        color: map.get($neutral, '003');
                     }
                 }
             }

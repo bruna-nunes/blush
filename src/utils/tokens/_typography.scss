@@ -1,3 +1,4 @@
+/* stylelint-disable import-notation */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 @mixin font-family-pattern {
@@ -89,13 +90,6 @@
     @include font-family-pattern;
 
     font-size: 14px;
-    font-weight: 600;
-}
-
-@mixin typography-label-1 {
-    @include font-family-pattern;
-
-    font-size: 16px;
     font-weight: 600;
 }
 
