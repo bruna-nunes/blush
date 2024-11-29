@@ -18,14 +18,14 @@
 
             .input {
                 width: 100%;
-                border-radius: map-get($border-radius, 'small');
+                border-radius: map.get($border-radius, 'small');
                 box-sizing: border-box;
             }
         }
     }
 
     .hint {
-        color: map-get($neutral, '007');
+        color: map.get($neutral, '007');
 
         @include typography-label-3;
     }
@@ -36,11 +36,11 @@
         gap: spacing(1);
 
         .icon {
-            filter: map-get($filter, 'danger-001');
+            filter: map.get($filter, 'danger-001');
         }
 
         .text {
-            color: map-get($error-absolute, '001');
+            color: map.get($error-absolute, '001');
 
             @include typography-label-3;
         }
@@ -50,27 +50,27 @@
     &.neutral {
         .input-label {
             .label {
-                color: map-get($neutral, '004');
+                color: map.get($neutral, '004');
             }
 
             .input-content {
                 .input {
-                    background-color: map-get($neutral, '014');
-                    border: map-get($border-width, 'nano') solid map-get($neutral, '011');
-                    color: map-get($neutral, '005');
+                    background-color: map.get($neutral, '014');
+                    border: map.get($border-width, 'nano') solid map.get($neutral, '011');
+                    color: map.get($neutral, '005');
                     
                     &::placeholder {
-                        color: map-get($neutral, '007');
+                        color: map.get($neutral, '007');
                     }
     
                     &:focus {
-                        outline-color: map-get($neutral, '005');
+                        outline-color: map.get($neutral, '005');
                     }
 
                     &:read-only {
-                        background-color: map-get($neutral, '013');
-                        border: map-get($border-width, 'nano') solid map-get($neutral, '010');
-                        color: map-get($neutral, '008');
+                        background-color: map.get($neutral, '013');
+                        border: map.get($border-width, 'nano') solid map.get($neutral, '010');
+                        color: map.get($neutral, '008');
                         cursor: not-allowed;
                     }
                 }
@@ -88,13 +88,13 @@
             }
 
             .label {
-                color: map-get($neutral, '007');
+                color: map.get($neutral, '007');
             }
             
             .input {
-                background-color: map-get($neutral, '013');
-                border: map-get($border-width, 'nano') solid map-get($neutral, '010');
-                color: map-get($neutral, '008');
+                background-color: map.get($neutral, '013');
+                border: map.get($border-width, 'nano') solid map.get($neutral, '010');
+                color: map.get($neutral, '008');
             }
         }
     }
@@ -103,17 +103,17 @@
         .input-label {
             .input-content {
                 .input {
-                    background-color: map-get($error-absolute, '007');
-                    border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+                    background-color: map.get($error-absolute, '007');
+                    border: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
     
                     &:focus {
-                        background-color: map-get($neutral, '014');
-                        border: map-get($border-width, 'nano') solid map-get($neutral, '011');
+                        background-color: map.get($neutral, '014');
+                        border: map.get($border-width, 'nano') solid map.get($neutral, '011');
                     }
                 }
 
                 .state-icon {
-                    filter: map-get($filter, 'danger-001');
+                    filter: map.get($filter, 'danger-001');
                 }  
             }
         }
@@ -123,17 +123,17 @@
         .input-label {
             .input-content {
                 .input {
-                    background-color: map-get($success-absolute, '007');
-                    border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+                    background-color: map.get($success-absolute, '007');
+                    border: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
     
                     &:focus {
-                        background-color: map-get($neutral, '014');
-                        border: map-get($border-width, 'nano') solid map-get($neutral, '011');
+                        background-color: map.get($neutral, '014');
+                        border: map.get($border-width, 'nano') solid map.get($neutral, '011');
                     }
                 }
 
                 .state-icon {
-                    filter: map-get($filter, 'success-001');
+                    filter: map.get($filter, 'success-001');
                 }
             }
             

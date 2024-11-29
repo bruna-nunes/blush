@@ -7,9 +7,9 @@
 
 	.tooltip {
 		position: absolute;
-		z-index: map-get($z-index, 'high');
+		z-index: map.get($z-index, 'high');
 		padding: spacing(1) 0;
-		border-radius: map-get($border-radius, 'small');
+		border-radius: map.get($border-radius, 'small');
 		width: max-content;
 		display: none;
 
@@ -25,6 +25,7 @@
 		.title, .content {
 			padding: 0 spacing(3);
 		}
+
 		.title {
 			display: block;
 			padding-bottom: spacing(1);
@@ -45,9 +46,9 @@
 
 			&::before {
 				top: 100%;
-				border-left: map-get($border-width, 'small') solid transparent;
-				border-right: map-get($border-width, 'small') solid transparent;
-				border-top: map-get($border-width, 'small') solid transparent;
+				border-left: map.get($border-width, 'small') solid transparent;
+				border-right: map.get($border-width, 'small') solid transparent;
+				border-top: map.get($border-width, 'small') solid transparent;
 				border-bottom: 0;
 				left: 50%;
 				transform: translateX(-50%);
@@ -61,12 +62,11 @@
 
 			&::before {
 				bottom: 100%;
-				border-left: map-get($border-width, 'small') solid transparent;
-				border-right: map-get($border-width, 'small') solid transparent;
-				border-bottom: map-get($border-width, 'small') solid transparent;
+				border-left: map.get($border-width, 'small') solid transparent;
+				border-right: map.get($border-width, 'small') solid transparent;
+				border-bottom: map.get($border-width, 'small') solid transparent;
 				border-top: 0;
 				left: 50%;
-				transform: translateX(-50%);left: 50%;
 				transform: translateX(-50%);
 			}
 		}
@@ -75,19 +75,19 @@
     // ***Colors
 	&.primary {
 		.tooltip {
-			background-color: map-get($primary-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($primary-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
+			color: map.get($neutral, '013');
 
 			.title {
-				border-bottom: map-get($border-width, 'nano') solid map-get($primary-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($primary-absolute, '004');
 			}
 		}
 
 		&.top {
 			.tooltip {
 				&::before {
-					border-top-color: map-get($primary-absolute, '001');
+					border-top-color: map.get($primary-absolute, '001');
 				}
 			}
 		}
@@ -95,7 +95,7 @@
 		&.bottom {
 			.tooltip {
 				&::before {
-					border-bottom-color: map-get($primary-absolute, '001');
+					border-bottom-color: map.get($primary-absolute, '001');
 				}
 			}
 		}
@@ -103,19 +103,19 @@
 
 	&.accent {
 		.tooltip {
-			background-color: map-get($accent-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($accent-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
+			color: map.get($neutral, '013');
 
 			.title {
-				border-bottom: map-get($border-width, 'nano') solid map-get($accent-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($accent-absolute, '004');
 			}
 		}
 
 		&.top {
 			.tooltip {
 				&::before {
-					border-top-color: map-get($accent-absolute, '001');
+					border-top-color: map.get($accent-absolute, '001');
 				}
 			}
 		}
@@ -123,7 +123,7 @@
 		&.bottom {
 			.tooltip {
 				&::before {
-					border-bottom-color: map-get($accent-absolute, '001');
+					border-bottom-color: map.get($accent-absolute, '001');
 				}
 			}
 		}
@@ -131,19 +131,19 @@
 
 	&.success {
 		.tooltip {
-			background-color: map-get($success-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($success-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($success-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($success-absolute, '004');
+			color: map.get($neutral, '013');
 
 			.title {
-				border-bottom:  map-get($border-width, 'nano') solid map-get($success-absolute, '004');
+				border-bottom:  map.get($border-width, 'nano') solid map.get($success-absolute, '004');
 			}
 		}
 
 		&.top {
 			.tooltip {
 				&::before {
-					border-top-color: map-get($success-absolute, '001');
+					border-top-color: map.get($success-absolute, '001');
 				}
 			}
 		}
@@ -151,7 +151,7 @@
 		&.bottom {
 			.tooltip {
 				&::before {
-					border-bottom-color: map-get($success-absolute, '001');
+					border-bottom-color: map.get($success-absolute, '001');
 				}
 			}
 		}
@@ -159,19 +159,19 @@
 
 	&.warning {
 		.tooltip {
-			background-color: map-get($warning-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($warning-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
+			color: map.get($neutral, '013');
 
 			.title {
-				border-bottom: map-get($border-width, 'nano') solid map-get($warning-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($warning-absolute, '004');
 			}
 		}
 
 		&.top {
 			.tooltip {
 				&::before {
-					border-top-color: map-get($warning-absolute, '001');
+					border-top-color: map.get($warning-absolute, '001');
 				}
 			}
 		}
@@ -179,7 +179,7 @@
 		&.bottom {
 			.tooltip {
 				&::before {
-					border-bottom-color: map-get($warning-absolute, '001');
+					border-bottom-color: map.get($warning-absolute, '001');
 				}
 			}
 		}
@@ -187,19 +187,19 @@
 
 	&.danger {
 		.tooltip {
-			background-color: map-get($error-absolute, '001');
-			border: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
-			color: map-get($neutral, '013');
+			background-color: map.get($error-absolute, '001');
+			border: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
+			color: map.get($neutral, '013');
 
 			.title {
-				border-bottom: map-get($border-width, 'nano') solid map-get($error-absolute, '004');
+				border-bottom: map.get($border-width, 'nano') solid map.get($error-absolute, '004');
 			}
 		}
 
 		&.top {
 			.tooltip {
 				&::before {
-					border-top-color: map-get($error-absolute, '001');
+					border-top-color: map.get($error-absolute, '001');
 				}
 			}
 		}
@@ -207,7 +207,7 @@
 		&.bottom {
 			.tooltip {
 				&::before {
-					border-bottom-color: map-get($error-absolute, '001');
+					border-bottom-color: map.get($error-absolute, '001');
 				}
 			}
 		}
@@ -216,19 +216,19 @@
 
 	&.neutral {
 		.tooltip {
-			background-color: map-get($neutral, '004');
-			border: map-get($border-width, 'nano') solid map-get($neutral, '007');
-			color: map-get($neutral, '013');
+			background-color: map.get($neutral, '004');
+			border: map.get($border-width, 'nano') solid map.get($neutral, '007');
+			color: map.get($neutral, '013');
 
 			.title {
-				border-bottom: map-get($border-width, 'nano') solid map-get($neutral, '007');
+				border-bottom: map.get($border-width, 'nano') solid map.get($neutral, '007');
 			}
 		}
 
 		&.top {
 			.tooltip {
 				&::before {
-					border-top-color: map-get($neutral, '004');
+					border-top-color: map.get($neutral, '004');
 				}
 			}
 		}
@@ -236,7 +236,7 @@
 		&.bottom {
 			.tooltip {
 				&::before {
-					border-bottom-color: map-get($neutral, '004');
+					border-bottom-color: map.get($neutral, '004');
 				}
 			}
 		}

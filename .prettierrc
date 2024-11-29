@@ -1,0 +1,15 @@
+{
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "endOfLine": "lf",
+    "overrides": [
+      {
+        "files": ["**/*.css", "**/*.scss", "**/*.vue"],
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
+}

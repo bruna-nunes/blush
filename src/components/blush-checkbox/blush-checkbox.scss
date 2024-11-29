@@ -15,8 +15,8 @@
             width: 16px;
             height: 16px;
             margin: 0;
-            border: map-get($border-width, 'nano') solid map-get($neutral, '010');
-            border-radius: map-get($border-radius, 'small');
+            border: map.get($border-width, 'nano') solid map.get($neutral, '010');
+            border-radius: map.get($border-radius, 'small');
             box-sizing: border-box;
     
             &:checked {
@@ -33,14 +33,14 @@
         }
     
         .label {
-            color: map-get($neutral, '004');
+            color: map.get($neutral, '004');
     
             @include typography-body-2;
         }
     }
 
     .hint {
-        color: map-get($neutral, '007');
+        color: map.get($neutral, '007');
 
         @include typography-label-3;
     }
@@ -51,11 +51,11 @@
         gap: spacing(1);
 
         .icon {
-            filter: map-get($filter, 'danger-001');
+            filter: map.get($filter, 'danger-001');
         }
 
         .text {
-            color: map-get($error-absolute, '001');
+            color: map.get($error-absolute, '001');
 
             @include typography-label-3;
         }
@@ -68,11 +68,11 @@
         .input-label {
             .input {
                 &:checked {
-                    background-color: map-get($primary-absolute, '001');
-                    border: map-get($border-width, 'nano') solid map-get($primary-absolute, '007'); 
+                    background-color: map.get($primary-absolute, '001');
+                    border: map.get($border-width, 'nano') solid map.get($primary-absolute, '007'); 
     
                     &::before {
-                        filter: map-get($filter, 'white');
+                        filter: map.get($filter, 'white');
                     }
                 }
             }
@@ -83,11 +83,11 @@
         .input-label {
             .input {
                 &:checked {
-                    background-color: map-get($accent-absolute, '001');
-                    border: map-get($border-width, 'nano') solid map-get($accent-absolute, '007'); 
+                    background-color: map.get($accent-absolute, '001');
+                    border: map.get($border-width, 'nano') solid map.get($accent-absolute, '007'); 
 
                     &::before {
-                        filter: map-get($filter, 'white');
+                        filter: map.get($filter, 'white');
                     }
                 }
             }
@@ -98,11 +98,11 @@
         .input-label {
             .input {
                 &:checked {
-                    background-color: map-get($success-absolute, '001');
-                    border: map-get($border-width, 'nano') solid map-get($success-absolute, '007'); 
+                    background-color: map.get($success-absolute, '001');
+                    border: map.get($border-width, 'nano') solid map.get($success-absolute, '007'); 
 
                     &::before {
-                        filter: map-get($filter, 'white');
+                        filter: map.get($filter, 'white');
                     }
                 }
             }
@@ -113,11 +113,11 @@
         .input-label {
             .input {
                 &:checked {
-                    background-color: map-get($warning-absolute, '001');
-                    border: map-get($border-width, 'nano') solid map-get($warning-absolute, '007'); 
+                    background-color: map.get($warning-absolute, '001');
+                    border: map.get($border-width, 'nano') solid map.get($warning-absolute, '007'); 
 
                     &::before {
-                        filter: map-get($filter, 'white');
+                        filter: map.get($filter, 'white');
                     }
                 }
             }
@@ -128,11 +128,11 @@
         .input-label {
             .input {
                 &:checked {
-                    background-color: map-get($error-absolute, '001');
-                    border: map-get($border-width, 'nano') solid map-get($error-absolute, '007'); 
+                    background-color: map.get($error-absolute, '001');
+                    border: map.get($border-width, 'nano') solid map.get($error-absolute, '007'); 
 
                     &::before {
-                        filter: map-get($filter, 'white');
+                        filter: map.get($filter, 'white');
                     }
                 }
             }
@@ -143,11 +143,11 @@
         .input-label {
             .input {
                 &:checked {
-                    background-color: map-get($neutral, '004');
-                    border: map-get($border-width, 'nano') solid map-get($neutral, '011'); 
+                    background-color: map.get($neutral, '004');
+                    border: map.get($border-width, 'nano') solid map.get($neutral, '011'); 
 
                     &::before {
-                        filter: map-get($filter, 'white');
+                        filter: map.get($filter, 'white');
                     }
                 }
             }
@@ -164,7 +164,7 @@
             }
 
             .label {
-                color: map-get($neutral, '008');
+                color: map.get($neutral, '008');
             }
         }
     }
@@ -172,7 +172,7 @@
     &.invalid {
         .input-label {
             .input {
-                border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+                border: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
             }
         }
     }
@@ -180,7 +180,7 @@
     &.valid {
         .input-label {
             .input {
-                border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+                border: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
             }
         }
     }

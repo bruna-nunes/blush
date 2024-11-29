@@ -19,7 +19,7 @@
             .custom-select-display {
                 cursor: pointer;
                 width: 100%;
-                border-radius: map-get($border-radius, 'small');
+                border-radius: map.get($border-radius, 'small');
                 box-sizing: border-box;
                 display: flex;
                 align-items: center;
@@ -30,6 +30,7 @@
                     overflow: hidden;
                     text-overflow: ellipsis; 
                 }
+
                 .arrow {
                     transform: rotate(90deg);
                 }
@@ -40,27 +41,26 @@
     .custom-select-options {
         list-style: none;
         padding: spacing(2);
-        margin: spacing(1) 0 0 0;
+        margin: spacing(1) 0 0;
         display: flex;
         flex-direction: column;
         gap: spacing(2);
         max-height: 160px;
         overflow: auto;
-        z-index: map-get($z-index, 'medium');
-
-        border-radius: map-get($border-radius, 'small');
-        box-shadow: map-get($shadows, '001');
+        z-index: map.get($z-index, 'medium');
+        border-radius: map.get($border-radius, 'small');
+        box-shadow: map.get($shadows, '001');
 
 
         .custom-option {
             cursor: pointer;
-            border-radius: map-get($border-radius, 'small');
+            border-radius: map.get($border-radius, 'small');
 
         }
     }
 
     .hint {
-        color: map-get($neutral, '007');
+        color: map.get($neutral, '007');
 
         @include typography-label-3;
     }
@@ -71,11 +71,11 @@
         gap: spacing(1);
 
         .icon {
-            filter: map-get($filter, 'danger-001');
+            filter: map.get($filter, 'danger-001');
         }
 
         .text {
-            color: map-get($error-absolute, '001');
+            color: map.get($error-absolute, '001');
 
             @include typography-label-3;
         }
@@ -88,35 +88,35 @@
     &.neutral {
         .select-label {
             .label {
-                color: map-get($neutral, '004');
+                color: map.get($neutral, '004');
             }
 
             .select-content {
                 .custom-select-display {
-                    background-color: map-get($neutral, '014');
-                    border: map-get($border-width, 'nano') solid map-get($neutral, '011');
-                    color: map-get($neutral, '005');
+                    background-color: map.get($neutral, '014');
+                    border: map.get($border-width, 'nano') solid map.get($neutral, '011');
+                    color: map.get($neutral, '005');
 
                     .arrow {
-                        filter: map-get($filter, 'neutral-005')
+                        filter: map.get($filter, 'neutral-005')
                     }
                 }
             }
         }
 
         .custom-select-options {
-            background-color: map-get($neutral, '014');
+            background-color: map.get($neutral, '014');
 
             .custom-option {
-                background-color: map-get($neutral, '013');
-                color: map-get($neutral, '005');
+                background-color: map.get($neutral, '013');
+                color: map.get($neutral, '005');
 
                 &.selected {
-                    background-color: map-get($neutral, '010');
+                    background-color: map.get($neutral, '010');
                 }
 
                 &:hover {
-                    background-color: map-get($neutral, '011');
+                    background-color: map.get($neutral, '011');
                 }
             }
         }
@@ -126,16 +126,16 @@
         .select-label {
             .select-content {
                 .custom-select-display {
-                    background-color: map-get($error-absolute, '007');
-                    border: map-get($border-width, 'nano') solid map-get($error-absolute, '001');
+                    background-color: map.get($error-absolute, '007');
+                    border: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
     
                     .arrow {
-                        filter: map-get($filter, 'danger-001')
+                        filter: map.get($filter, 'danger-001')
                     }
                 }
 
                 .state-icon {
-                    filter: map-get($filter, 'danger-001');
+                    filter: map.get($filter, 'danger-001');
                 }  
             }
         }
@@ -145,16 +145,16 @@
         .select-label {
             .select-content {
                 .custom-select-display {
-                    background-color: map-get($success-absolute, '007');
-                    border: map-get($border-width, 'nano') solid map-get($success-absolute, '001');
+                    background-color: map.get($success-absolute, '007');
+                    border: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
     
                     .arrow {
-                        filter: map-get($filter, 'success-001')
+                        filter: map.get($filter, 'success-001')
                     }
                 }
 
                 .state-icon {
-                    filter: map-get($filter, 'success-001');
+                    filter: map.get($filter, 'success-001');
                 }
             }
             
@@ -166,19 +166,19 @@
             cursor: not-allowed;
 
             .label {
-                color: map-get($neutral, '008');
+                color: map.get($neutral, '008');
                 cursor: not-allowed;
             }
 
             .select-content {
                 .custom-select-display {
-                    background-color: map-get($neutral, '013');
-                    border: map-get($border-width, 'nano') solid map-get($neutral, '010');
+                    background-color: map.get($neutral, '013');
+                    border: map.get($border-width, 'nano') solid map.get($neutral, '010');
                     cursor: not-allowed;
-                    color: map-get($neutral, '007');
+                    color: map.get($neutral, '007');
 
                     .arrow {
-                        filter: map-get($filter, 'neutral-010')
+                        filter: map.get($filter, 'neutral-010')
                     }
                 }
             }
@@ -255,7 +255,7 @@
 
         .custom-select-options {
             .custom-option {
-                padding: spacing(2) spacing(2);
+                padding: spacing(2);
 
                 @include typography-label-1;
             }
