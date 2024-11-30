@@ -12,6 +12,7 @@
 
     &.dismissible {
         .dismiss-icon {
+            font-size: 16px;
             margin-left: spacing(2);
             cursor: pointer;
         }
@@ -23,7 +24,7 @@
         color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map.get($filter, 'white');
+            color: map.get($neutral, '014');
         }
     }
 
@@ -33,7 +34,7 @@
         color: map.get($primary-absolute, '001');
 
         .dismiss-icon {
-            filter: map.get($filter, 'primary-001');
+            color: map.get($primary-absolute, '001');
         }
     }
 
@@ -42,7 +43,7 @@
         color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map.get($filter, 'white');
+            color: map.get($neutral, '014');
         }
     }
 
@@ -52,7 +53,7 @@
         color: map.get($accent-absolute, '001');
 
         .dismiss-icon {
-            filter: map.get($filter, 'accent-001');
+            color: map.get($accent-absolute, '001');
         }
     }
 
@@ -61,7 +62,7 @@
         color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map.get($filter, 'white');
+            color: map.get($neutral, '014');
         }
     }
 
@@ -71,7 +72,7 @@
         color: map.get($success-absolute, '001');
 
         .dismiss-icon {
-            filter: map.get($filter, 'success-001');
+            color: map.get($success-absolute, '001');
         }
     }
 
@@ -80,7 +81,7 @@
         color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map.get($filter, 'white');
+            color: map.get($neutral, '014');
         }
     }
 
@@ -90,7 +91,7 @@
         color: map.get($warning-absolute, '001');
 
         .dismiss-icon {
-            filter: map.get($filter, 'warning-001');
+            color: map.get($warning-absolute, '001');
         }
     }
 
@@ -99,7 +100,7 @@
         color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map.get($filter, 'white');
+            color: map.get($neutral, '014');
         }
     }
 
@@ -109,7 +110,7 @@
         color: map.get($error-absolute, '001');
 
         .dismiss-icon {
-            filter: map.get($filter, 'danger-001');
+            color: map.get($error-absolute, '001');
         }
     }
 
@@ -118,7 +119,7 @@
         color: map.get($neutral, '013');
 
         .dismiss-icon {
-            filter: map.get($filter, 'white');
+            color: map.get($neutral, '014');
         }
     }
 
@@ -128,7 +129,7 @@
         color: map.get($neutral, '004');
 
         .dismiss-icon {
-            filter: map.get($filter, 'neutral-004');
+            color: map.get($neutral, '004');
         }
     }
 }

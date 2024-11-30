@@ -3,15 +3,13 @@
 		:class="classes"
 	>
 		<span>{{ props.text }}</span>
-		<img
+		<span
 			v-if="props.showDismiss"
-			src="../../assets/icons/cancel.svg"
-			width="16"
-			height="16"
-			class="dismiss-icon"
-			alt="Fechar badge"
+			class="material-icons-round dismiss-icon"
 			@click="emit('onDismiss')"
 		>
+			cancel
+		</span>
 	</span>
 </template>
   

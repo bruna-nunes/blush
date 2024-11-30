@@ -8,15 +8,13 @@
 			:class="classes"
 			@click.stop
 		>
-			<img
+			<span
 				v-if="props.showDismissButton"
-				src="../../assets/icons/x.svg"
-				width="24"
-				height="24"
-				class="dismiss-icon"
-				alt="Fechar modal"
+				class="material-icons-round dismiss-icon"
 				@click="emit('onClose')"
 			>
+				close
+			</span>
 			<header
 				v-if="$slots.header"
 				class="header"

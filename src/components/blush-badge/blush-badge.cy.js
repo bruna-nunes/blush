@@ -31,7 +31,7 @@ describe('events', () => {
       },  
 		})
 
-		cy.get('.blush-badge img.dismiss-icon').click()
+		cy.get('.blush-badge .dismiss-icon').click()
 			.then(() => {
 				cy.wrap(Cypress.vueWrapper.emitted('onDismiss')).should('have.length', 1)
 			})

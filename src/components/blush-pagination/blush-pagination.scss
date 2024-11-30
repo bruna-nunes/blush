@@ -30,6 +30,10 @@
         justify-content: center;
         align-items: center;
 
+        .arrow {
+            font-size: 24px;
+        }
+
         &:not(:disabled) {
             cursor: pointer;
         }
@@ -65,7 +69,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'primary-001');;
+            .arrow {
+                color: map.get($primary-absolute, '001'); 
+            }
         }
     }
 
@@ -84,7 +90,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'primary-001');;
+            .arrow {
+                color: map.get($primary-absolute, '001'); 
+            }
         }
     }
 
@@ -104,7 +112,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'accent-001');;
+            .arrow {
+                color: map.get($accent-absolute, '001'); 
+            }
         }
     }
 
@@ -123,7 +133,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'accent-001');;
+            .arrow {
+                color: map.get($accent-absolute, '001'); 
+            }
         }
     }
 
@@ -143,7 +155,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'success-001');;
+            .arrow {
+                color: map.get($success-absolute, '001'); 
+            }
         }
     }
 
@@ -162,7 +176,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'success-001');;
+            .arrow {
+                color: map.get($success-absolute, '001'); 
+            }
         }
     }
 
@@ -182,7 +198,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'warning-001');;
+            .arrow {
+                color: map.get($warning-absolute, '001');
+            }
         }
     }
 
@@ -201,7 +219,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'warning-001');;
+            .arrow {
+                color: map.get($warning-absolute, '001');
+            }
         }
     }
 
@@ -221,7 +241,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'danger-001');;
+            .arrow {
+                color: map.get($error-absolute, '001'); 
+            }
         }
     }
 
@@ -240,7 +262,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'danger-001');;
+            .arrow {
+                color: map.get($error-absolute, '001'); 
+            }
         }
     }
 
@@ -260,7 +284,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'neutral-004');;
+            .arrow {
+                color: map.get($neutral, '004');
+            }
         }
     }
 
@@ -279,7 +305,9 @@
         }
 
         .prev, .next {
-            filter: map.get($filter, 'neutral-004');;
+            .arrow {
+                color: map.get($neutral, '004');
+            }
         }
     }
 }

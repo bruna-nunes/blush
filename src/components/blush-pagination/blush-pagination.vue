@@ -6,13 +6,12 @@
 			:disabled="currentPageModel === 1"
 			@click="setPage(currentPageModel - 1)"
 		>
-			<img
+			<span
 				v-if="props.prevNextStyle === 'arrow'"
-				src="../../assets/icons/arrow.svg"
-				width="24"
-				height="24"
-				alt="Anterior"
+				class="material-icons-round arrow"
 			>
+				chevron_left
+			</span>
 			<p
 				v-if="props.prevNextStyle === 'text'"
 			>
@@ -62,13 +61,12 @@
 			:disabled="currentPageModel === totalPages"
 			@click="setPage(currentPageModel + 1)"
 		>
-			<img
+			<span
 				v-if="props.prevNextStyle === 'arrow'"
-				src="../../assets/icons/arrow.svg"
-				width="24"
-				height="24"
-				alt="Próximo"
+				class="material-icons-round arrow"
 			>
+				chevron_right
+			</span>
 			<p
 				v-if="props.prevNextStyle === 'text'"
 			>

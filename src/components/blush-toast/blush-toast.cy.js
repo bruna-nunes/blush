@@ -27,7 +27,7 @@ describe('events', () => {
       },  
 		})
 
-		cy.get('.blush-toast img.dismiss-icon').click()
+		cy.get('.blush-toast .dismiss-icon').click()
 			.then(() => {
 				cy.wrap(Cypress.vueWrapper.emitted('onDismiss')).should('have.length', 1)
 			})

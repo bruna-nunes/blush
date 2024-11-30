@@ -30,12 +30,12 @@ export default {
 				}
 			},
 			description: 'Estilo do badge',
-			options: ['primary', 'primary-outline', 'primary-ghost',
-				'accent', 'accent-outline', 'accent-ghost',
-				'success', 'success-outline', 'success-ghost',
-				'warning', 'warning-outline', 'warning-ghost',
-				'danger', 'danger-outline', 'danger-ghost',
-				'neutral', 'neutral-outline', 'neutral-ghost'],
+			options: ['primary', 'primary-outline',
+				'accent', 'accent-outline',
+				'success', 'success-outline',
+				'warning', 'warning-outline',
+				'danger', 'danger-outline',
+				'neutral', 'neutral-outline'],
 		},
 		showDismiss: {
 			control: {

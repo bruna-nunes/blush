@@ -9,6 +9,10 @@
     transition: all 400ms linear;
     transform: translateY(0);
 
+    .icon {
+        font-size: 28px;
+    }
+
     .content {
         display: flex;
         flex-direction: column;
@@ -31,8 +35,9 @@
 
     &.dismissible {
         .dismiss-icon {
+            font-size: 24px;
             cursor: pointer;
-            filter:  map.get($filter, 'neutral-005');
+            color:  map.get($neutral, '003');
         }
     }
    

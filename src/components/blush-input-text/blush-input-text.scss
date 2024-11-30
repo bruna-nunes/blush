@@ -21,6 +21,10 @@
                 border-radius: map.get($border-radius, 'small');
                 box-sizing: border-box;
             }
+
+            .state-icon {
+                font-size: 18px;
+            }
         }
     }
 
@@ -36,7 +40,8 @@
         gap: spacing(1);
 
         .icon {
-            filter: map.get($filter, 'danger-001');
+            font-size: 14px;
+            color: map.get($error-absolute, '001');
         }
 
         .text {
