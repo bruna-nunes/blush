@@ -29,7 +29,7 @@ describe('events', () => {
       },  
 		})
 
-		cy.get('.blush-alert img.dismiss-icon').click()
+		cy.get('.blush-alert .dismiss-icon').click()
 			.then(() => {
 				cy.wrap(Cypress.vueWrapper.emitted('onDismiss')).should('have.length', 1)
 			})

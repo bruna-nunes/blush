@@ -29,22 +29,16 @@
 					<template v-else>
 						{{ selectedValueLabel || props.placeholder }}
 					</template>
-					<img
-						src="../../assets/icons/arrow.svg"
-						alt="Seta para alternar visibilidade"
-						width="24"
-						height="24"
-						class="arrow"
-					>
+					<span class="material-icons-round arrow">
+						expand_more
+					</span>
 				</div>
-				<img
+				<span
 					v-if="showStateIcon"
-					:src="stateImgSrc"
-					:alt="stateImgAlt"
-					width="18"
-					height="18"
-					class="state-icon"
+					class="material-icons-round state-icon"
 				>
+					{{ icon }}
+				</span>
 			</div>
 		</div>
 		<div
@@ -57,13 +51,11 @@
 			v-if="props.errorText && !isOpen"
 			class="error"
 		>
-			<img
-				src="../../assets/icons/exclamation.svg"
-				alt="Círculo com exclamação"
-				width="14"
-				height="14"
-				class="icon"
+			<span
+				class="material-icons-round icon"
 			>
+				error
+			</span>
 			<span class="text">
 				{{ props.errorText }}
 			</span>
@@ -255,30 +247,18 @@ const handleClickOutside = (event) => {
 	}
 }
 
+const iconStateMap = {
+	'valid': 'done',
+	'invalid': 'error',
+}
+
 const showStateIcon = computed(() => {
 	return ['valid', 'invalid'].includes(props.state)
 })
-const iconStateMap = {
-	'valid': {
-		src: '/src/assets/icons/check.svg',
-		alt: 'Ícone de check'
-	},
-	'invalid':  {
-		src: '/src/assets/icons/exclamation.svg',
-		alt: 'Ícone de erro'
-	},
-}
 
-const stateImgSrc = computed(() => {
-	if(['valid', 'invalid'].includes(props.state)) {
-		return iconStateMap[props.state].src
-	}
-	return ''
-})
-
-const stateImgAlt = computed(() => {
+const icon = computed(() => {
 	if(showStateIcon.value) {
-		return iconStateMap[props.state].alt
+		return iconStateMap[props.state]
 	}
 	return ''
 })

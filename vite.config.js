@@ -15,9 +15,10 @@ export default defineConfig({
 		preprocessorOptions: {
 			scss: {
 				additionalData: `
-          @use 'sass:map';
-          @import '%root%/src/utils/tokens/tokens';
-        `
+					@use 'sass:map';
+					@import '%root%/src/utils/tokens/tokens';
+					@import "https://fonts.googleapis.com/icon?family=Material+Icons+Round";
+       	 		`
 			}
 		}
 	}

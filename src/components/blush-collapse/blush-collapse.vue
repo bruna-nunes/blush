@@ -15,13 +15,9 @@
 			<p class="title">
 				{{ props.title }}
 			</p>
-			<img
-				src="../../assets/icons/arrow.svg"
-				width="24"
-				height="24"
-				class="icon-collapse"
-				alt="Seta para alternar visibilidade"
-			>
+			<span class="material-icons-round icon-collapse">
+				expand_more
+			</span>
 		</header>
 		<main
 			class="main-collapse"

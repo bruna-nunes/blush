@@ -2,13 +2,12 @@
 	<div
 		:class="classes"
 	>
-		<img
-			:src="stateImgSrc"
-			width="28"
-			height="28"
-			class="icon"
-			:alt="stateImgAlt" 
+		<span
+			v-if="showStateIcon"
+			class="material-icons-round icon"
 		>
+			{{ icon }}
+		</span>
 		<div class="content">
 			<h6
 				v-if="props.title"
@@ -23,25 +22,19 @@
 				{{ props.text }}
 			</p>
 		</div>
-		<img
+		<span
 			v-if="props.showDismiss"
-			src="../../assets/icons/x.svg"
-			width="24"
-			height="24"
-			class="dismiss-icon"
-			alt="Fechar toast"
+			class="material-icons-round dismiss-icon"
 			@click="emit('onDismiss')"
 		>
+			close
+		</span>
 	</div>
 </template>
   
 <script setup>
 import { computed } from 'vue'
-import InformativeIcon from '/src/assets/icons/info-triangle.svg'
-import SuccessIcon from '/src/assets/icons/check-circle.svg'
-import WarningIcon from '/src/assets/icons/exclamation-triangle.svg'
-import ErrorIcon from '/src/assets/icons/cancel.svg'
-  
+
 const props = defineProps({
 	title: {
 		type: String
@@ -76,37 +69,19 @@ const classes = computed(() => [
 ])
 
 const iconStateMap = {
-	'success': {
-		src: SuccessIcon,
-		alt: 'Ícone de sucesso'
-	},
-	'warning': {
-		src: WarningIcon,
-		alt: 'Ícone de aviso'
-	},
-	'error': {
-		src: ErrorIcon,
-		alt: 'Ícone de erro'
-	},
-	'informative': {
-		src: InformativeIcon,
-		alt: 'Ícone de informação'
-	},
+	'success': 'check_circle',
+	'warning': 'warning',
+	'error': 'cancel',
+	'informative': 'info',
 }
 
 const showStateIcon = computed(() => {
-	return ['success', 'warning', 'error', 'ínformative'].includes(props.type)
+	return ['success', 'warning', 'error', 'informative'].includes(props.type)
 }) 
-const stateImgSrc = computed(() => {
-	if(showStateIcon.value) {
-		return iconStateMap[props.type].src
-	}
-	return ''
-})
 
-const stateImgAlt = computed(() => {
+const icon = computed(() => {
 	if(showStateIcon.value) {
-		return iconStateMap[props.type].alt
+		return iconStateMap[props.type]
 	}
 	return ''
 })

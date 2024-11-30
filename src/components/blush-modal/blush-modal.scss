@@ -38,11 +38,10 @@ $size-dismiss-icon: 24px;
 		> .dismiss-icon {
 			border: none;
 			position: absolute;
-			width: $size-dismiss-icon;
-			height: $size-dismiss-icon;
 			right: spacing(3);
 			top: spacing(3);
 			cursor: pointer;
+			font-size: 24px;
 		}
 
 		.header {

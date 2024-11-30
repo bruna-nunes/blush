@@ -32,7 +32,6 @@
 
         .icon-collapse {
             margin-left: spacing(2);
-            transform: rotate(90deg);
             transition: all 300ms linear;
         }
     }
@@ -46,7 +45,7 @@
    }
 
     .radio-collapse:checked ~ .header-collapse .icon-collapse {
-        transform: rotate(-90deg);
+        transform: rotate(-180deg);
     }
     
     .radio-collapse:checked ~ .main-collapse {
@@ -61,7 +60,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'neutral-013')
+                color: map.get($neutral, '013');
             }
         }
     }
@@ -73,7 +72,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'primary-001')
+                color: map.get($primary-absolute, '001');
             }
         }
     }
@@ -85,7 +84,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'neutral-013')
+                color: map.get($neutral, '013');
             }
         }
     }
@@ -97,7 +96,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'accent-001')
+                color: map.get($accent-absolute, '001');
             }
         }
     }
@@ -109,7 +108,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'neutral-013')
+                color: map.get($neutral, '013');
             }
         }
     }
@@ -121,7 +120,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'success-001')
+                color: map.get($success-absolute, '001');
             }
         }
     }
@@ -133,7 +132,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'neutral-013')
+                color: map.get($neutral, '013');
             }
         }
     }
@@ -145,7 +144,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'warning-001')
+                color: map.get($warning-absolute, '001');
             }
         }
     }
@@ -157,7 +156,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'neutral-013')
+                color: map.get($neutral, '013');
             }
         }
     }
@@ -169,7 +168,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'danger-001')
+                color: map.get($error-absolute, '001');
             }
         }
     }
@@ -181,7 +180,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'neutral-013')
+                color: map.get($neutral, '013');
             }
         }
     }
@@ -193,7 +192,7 @@
 
         .header-collapse {
             .icon-collapse {
-                filter: map.get($filter, 'neutral-008')
+                color: map.get($neutral, '008');
             }
         }
     }
