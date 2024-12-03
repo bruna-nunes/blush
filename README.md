@@ -1,6 +1,9 @@
 # Blush
 
-Component Library and future Design System.
+Component Library and Design System.
+
+Check [the documentation available online](https://bruna-nunes.github.io/blush)
+
 ## 🧰 Tools and Technologies used
 
 - Vue
@@ -29,3 +32,5 @@ Component Library and future Design System.
 
 ## 🪄 Dependencies
 /* decide and describe */
+
+
