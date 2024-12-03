@@ -11,6 +11,10 @@ const config = {
 		name: '@storybook/vue3-vite',
 		options: {},
 	},
-	staticDirs: ['../src/assets']
+	staticDirs: ['../src/assets'],
+	managerHead: (header) => `
+		${header}
+		<link rel="shortcut icon" href="/favicon.ico" />
+	`
 }
 export default config

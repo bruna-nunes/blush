@@ -11,7 +11,7 @@ addons.setConfig({
 
     brandTitle: 'Blush',
     brandUrl: '#',
-    brandImage: '../src/assets/logos/blush-logo-primary.png',
+    brandImage: 'https://raw.githubusercontent.com/bruna-nunes/blush/refs/heads/main/src/assets/logos/blush-logo-primary.png',
     brandTarget: '_self',
 
     colorPrimary: '#D6A235',
