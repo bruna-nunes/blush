@@ -29,8 +29,3 @@ Check [the documentation available online](https://bruna-nunes.github.io/blush)
 
 ### Run the Cypress executable to tests
 `npx cypress open`
-
-## 🪄 Dependencies
-/* decide and describe */
-
-
