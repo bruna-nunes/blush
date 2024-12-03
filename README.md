@@ -1,6 +1,9 @@
 # Blush
 
-Component Library and future Design System.
+Component Library and Design System.
+
+Check [the documentation available online](https://bruna-nunes.github.io/blush)
+
 ## 🧰 Tools and Technologies used
 
 - Vue
@@ -26,6 +29,3 @@ Component Library and future Design System.
 
 ### Run the Cypress executable to tests
 `npx cypress open`
-
-## 🪄 Dependencies
-/* decide and describe */
