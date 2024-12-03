@@ -11,5 +11,6 @@ const config = {
 		name: '@storybook/vue3-vite',
 		options: {},
 	},
+	staticDirs: ['../src/assets']
 }
 export default config
