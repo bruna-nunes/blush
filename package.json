@@ -1,8 +1,17 @@
 {
   "name": "blush",
-  "private": true,
-  "version": "0.0.1",
+  "description": "Blush Design System and Component Library",
+  "version": "0.1.0",
+  "author": "bruna-nunes",
+  "license": "MIT",
   "type": "module",
+  "main": "./dist/blush.cjs",
+  "module": "./dist/blush.js",
+  "style": "./dist/blush.css",
+  "files": [
+    "dist",
+    "src/utils/tokens"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
