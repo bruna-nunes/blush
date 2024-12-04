@@ -105,7 +105,7 @@
                     color: map.get($neutral, '005');
 
                     .arrow {
-                        filter: map.get($filter, 'neutral-005')
+                        color: map.get($neutral, '005');
                     }
                 }
             }
@@ -137,12 +137,12 @@
                     border: map.get($border-width, 'nano') solid map.get($error-absolute, '001');
     
                     .arrow {
-                        filter: map.get($filter, 'danger-001')
+                        color: map.get($error-absolute, '001');
                     }
                 }
 
                 .state-icon {
-                    filter: map.get($filter, 'danger-001');
+                    color: map.get($error-absolute, '001');
                 }  
             }
         }
@@ -156,12 +156,12 @@
                     border: map.get($border-width, 'nano') solid map.get($success-absolute, '001');
     
                     .arrow {
-                        filter: map.get($filter, 'success-001')
+                        color: map.get($success-absolute, '001');
                     }
                 }
 
                 .state-icon {
-                    filter: map.get($filter, 'success-001');
+                    color: map.get($success-absolute, '001');
                 }
             }
             
@@ -185,7 +185,7 @@
                     color: map.get($neutral, '007');
 
                     .arrow {
-                        filter: map.get($filter, 'neutral-010')
+                        color: map.get($neutral, '010');
                     }
                 }
             }

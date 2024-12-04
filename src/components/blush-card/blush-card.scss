@@ -4,6 +4,7 @@
     width: fit-content;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     .image-top {
         border-top-left-radius: map.get($border-radius, 'small');
