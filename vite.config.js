@@ -21,5 +21,26 @@ export default defineConfig({
        	 		`
 			}
 		}
+	},
+	build: {
+		cssCodeSplit: false,
+		sourcemap: false,
+		emptyOutDir: true,
+		plugins: [vue()],
+		lib: {
+			entry: [
+				path.resolve(__dirname, 'blush/blush.js'),
+				path.resolve(__dirname, 'blush/blush.scss')
+			],
+			name: 'blush'
+		},
+		rollupOptions: {
+			external: ['vue'],
+			output: {
+			  globals: {
+				vue: 'Vue'
+			  }
+			}
+		  }
 	}
 })
