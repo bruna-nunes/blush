@@ -118,7 +118,7 @@
                 }
 
                 .state-icon {
-                    filter: map.get($filter, 'danger-001');
+                    color: map.get($error-absolute, '001');
                 }  
             }
         }
@@ -138,7 +138,7 @@
                 }
 
                 .state-icon {
-                    filter: map.get($filter, 'success-001');
+                    color: map.get($success-absolute, '001');
                 }
             }
             
