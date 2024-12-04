@@ -24,7 +24,7 @@ Import blush as an external package and use its components and design tokens
 
 ### Install Blush
 ```sh
-npm install blush
+npm install blush-ds
 ```
 
 ### Import the Blush global style into your `main.js`
