@@ -30,7 +30,7 @@ npm install blush-ds
 ### Import the Blush global style into your `main.js`
 
 ```js
-import 'blush/dist/style.css'
+import 'blush-ds/dist/style.css'
 ```
 
 ### Use components by importing them
@@ -38,7 +38,7 @@ import 'blush/dist/style.css'
 ```html
 <!-- App.vue -->
 <script>
-    import { blushAlert } from 'blush'
+    import { blushAlert } from 'blush-ds'
 </script>
 <template>
     <blush-alert
@@ -55,7 +55,7 @@ import 'blush/dist/style.css'
 
 ```css
 /* some css file */
-@import "blush/src/utils/tokens/tokens.scss";
+@import "blush-ds/src/utils/tokens/tokens.scss";
 ```
 
 ### 💡 If you are using the Vite bundler, you can import the tokens globally like this (this is what we recommend):
@@ -73,7 +73,7 @@ export default defineConfig({
       scss: {
         additionalData: `
           @use 'sass:map';
-          @import "blush/src/utils/tokens/tokens.scss";
+          @import "blush-ds/src/utils/tokens/tokens.scss";
         `
       }
     }
